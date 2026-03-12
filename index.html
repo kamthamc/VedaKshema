@@ -43,7 +43,6 @@
 
 <body class="text-gray-800 antialiased min-h-[100dvh] flex flex-col justify-between">
 
-  <!-- AI DISCLAIMER BANNER -->
   <header aria-label="Site Disclaimer" class="w-full flex justify-center bg-amber-100 border-b border-amber-200 z-[60] relative px-4 py-2">
     <div class="w-full max-w-7xl flex items-center justify-center gap-2 text-amber-900 text-xs md:text-sm font-medium text-center">
       <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
@@ -51,7 +50,6 @@
     </div>
   </header>
 
-  <!-- Toast Notification -->
   <div id="toast" role="status" aria-live="polite" class="fixed top-12 w-full flex justify-center z-[100] pointer-events-none opacity-0 transition-opacity duration-300">
     <div class="alert alert-success shadow-xl text-white max-w-sm flex items-center gap-3 rounded-2xl bg-emerald-600 border-none">
       <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -59,7 +57,6 @@
     </div>
   </div>
 
-  <!-- Navbar -->
   <nav aria-label="Main Navigation" class="sticky top-0 z-50 bg-white/85 backdrop-blur-xl border-b border-emerald-100 shadow-sm w-full flex justify-center">
     <div class="w-full max-w-7xl px-4 lg:px-8 flex items-center justify-between h-20">
       
@@ -83,15 +80,11 @@
     </div>
   </nav>
 
-  <!-- Main Content -->
   <main id="main-content" class="flex flex-col flex-grow w-full">
     
-    <!-- Storefront View -->
     <div id="storefront-view" class="flex flex-col w-full fade-in pb-24 gap-16">
       
-      <!-- Custom SVG Hero Section -->
       <section aria-labelledby="hero-title" class="relative flex justify-center bg-gradient-to-br from-emerald-950 via-emerald-900 to-green-950 text-white overflow-hidden py-16 md:py-24 px-4 lg:px-8">
-        
         <div class="relative z-10 w-full max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-12">
           <div class="flex flex-col gap-6 max-w-xl text-center lg:text-left z-20">
             <span class="text-amber-400 font-bold tracking-widest uppercase text-xs md:text-sm shadow-sm inline-block">Clinical Ayurvedic Formulations</span>
@@ -103,7 +96,6 @@
               <button aria-label="Scroll to shop section" onclick="document.getElementById('shop-section').scrollIntoView({behavior: 'smooth'})" class="bg-amber-500 hover:bg-amber-400 text-amber-950 font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all">Explore VedaKshema</button>
             </div>
           </div>
-
           <div class="hidden lg:flex w-1/2 justify-center relative">
             <svg viewBox="0 0 500 500" class="w-[120%] max-w-[600px] h-auto drop-shadow-2xl scale-110" xmlns="http://www.w3.org/2000/svg">
               <defs>
@@ -139,13 +131,11 @@
       <section id="shop-section" aria-labelledby="shop-title" class="flex justify-center w-full px-4 lg:px-8">
         <div class="w-full max-w-7xl flex flex-col gap-8">
           
-          <!-- Master Filtering Dashboard -->
           <div class="flex flex-col gap-6 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
             <h2 id="shop-title" class="text-3xl font-serif font-bold text-emerald-950">Curated Formulations</h2>
             
             <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 border-t border-gray-100 pt-6">
               
-              <!-- Format / Category Filter -->
               <div class="flex flex-col gap-2 w-full lg:w-auto">
                 <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Filter by Format</span>
                 <div class="bg-gray-50 p-1.5 rounded-full border border-gray-200 inline-flex gap-1 flex-wrap" role="group" aria-label="Filter formats">
@@ -156,7 +146,6 @@
                 </div>
               </div>
 
-              <!-- Health Focus Filter -->
               <div class="flex flex-col gap-2 w-full lg:w-auto">
                 <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Filter by Health Goal</span>
                 <div class="flex flex-wrap gap-2" role="group" aria-label="Filter by Health Focus">
@@ -171,7 +160,6 @@
             </div>
           </div>
 
-          <!-- Products Grid -->
           <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full" role="list">
             <!-- Injected via JS -->
           </div>
@@ -206,7 +194,7 @@
       <div class="flex justify-between items-center border-b border-gray-100 pb-4">
         <h2 id="modal-title" class="font-serif font-bold text-3xl text-emerald-950 flex items-center gap-3">
           <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
-          Your Cart & Protocols
+          Your Prep List
         </h2>
         <form method="dialog">
           <button aria-label="Close Modal" class="btn btn-sm btn-circle btn-ghost text-gray-500 hover:bg-gray-100">✕</button>
@@ -215,7 +203,6 @@
       
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         
-        <!-- Cart Items List -->
         <div class="flex flex-col gap-4 overflow-y-auto max-h-[60vh] pr-2">
           <h3 class="font-serif font-bold text-xl text-emerald-900 border-b pb-2">Selected Items</h3>
           <div id="cart-content" role="list" class="flex flex-col gap-4">
@@ -223,7 +210,6 @@
           </div>
         </div>
 
-        <!-- Master Ingredients List -->
         <div class="flex flex-col gap-4 overflow-y-auto max-h-[60vh] bg-emerald-50/50 p-6 rounded-2xl border border-emerald-100">
           <div id="master-ingredient-list" class="flex flex-col gap-2">
              <!-- JS Injected -->
@@ -235,7 +221,7 @@
       <div class="modal-action flex flex-col sm:flex-row justify-between items-center gap-4 border-t border-gray-100 pt-6">
         <button id="download-all-btn" class="btn bg-emerald-900 hover:bg-emerald-800 text-white rounded-xl border-none shadow-md w-full sm:w-auto" onclick="downloadAllRecipes()">
           <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-          Download All Recipes (.txt)
+          Download Master List (.txt)
         </button>
         <form method="dialog" class="w-full sm:w-auto">
           <button class="btn bg-gray-100 hover:bg-gray-200 text-gray-800 border-none rounded-xl w-full sm:w-auto">Continue Shopping</button>
@@ -344,18 +330,70 @@
       }, 3000);
     }
 
-    // Parses strings like "1.5 cups Flour" and multiplies by quantity
-    function parseIngredientString(ing, qty) {
-      const match = ing.trim().match(/^([\d\.]+)?\s*(.*)/);
-      if (match && match[1]) {
-        const num = parseFloat(match[1]);
-        if (!isNaN(num)) {
-          // Multiply and format cleanly (e.g., 1.5 * 2 = 3)
-          const total = Number.isInteger(num * qty) ? (num * qty) : (num * qty).toFixed(2);
-          return `<span class="text-emerald-700 font-bold bg-emerald-100 px-1.5 py-0.5 rounded shadow-sm mr-1">${total}</span> ${match[2]}`;
-        }
+    function compileMasterGroceryList() {
+      if (cart.length === 0) {
+          masterIngList.innerHTML = `<p class="text-gray-500 text-center py-8">Add items to view prep list.</p>`;
+          return;
       }
-      return `${ing} <span class="text-gray-400 font-bold ml-1">(x${qty})</span>`;
+
+      let masterDict = {};
+
+      cart.forEach(cartItem => {
+        const qty = cartItem.quantity;
+        cartItem.item.ingredients.forEach(ing => {
+           // Regex to extract quantity, unit, and the ingredient name
+           const match = ing.trim().match(/^([\d\.]+)?\s*(cup|cups|tbsp|tsp|g|kg|ml|l|pinch|drop|drops)?\s*(of\s+)?(.*)/i);
+           const fracMatch = ing.trim().match(/^(\d+)\/(\d+)\s+(cup|cups|tbsp|tsp|g|kg|ml|l)?\s*(of\s+)?(.*)/i);
+           
+           let amountStr = "";
+           let ingName = ing.trim();
+
+           if (fracMatch) {
+               const num = parseFloat(fracMatch[1]) / parseFloat(fracMatch[2]);
+               const unit = fracMatch[3] ? fracMatch[3] : "";
+               ingName = fracMatch[5];
+               const multiplied = Number.isInteger(num * qty) ? (num * qty) : (num * qty).toFixed(2);
+               amountStr = `${multiplied} ${unit}`.trim();
+           } else if (match && match[1]) {
+               const num = parseFloat(match[1]);
+               const unit = match[2] ? match[2] : "";
+               ingName = match[4];
+               const multiplied = Number.isInteger(num * qty) ? (num * qty) : (num * qty).toFixed(2);
+               amountStr = `${multiplied} ${unit}`.trim();
+           } else {
+               amountStr = `x${qty}`; 
+           }
+
+           // Clean up formatting
+           ingName = ingName.charAt(0).toUpperCase() + ingName.slice(1);
+           ingName = ingName.replace(/\(.*?\)/g, '').trim(); // Remove brackets
+           ingName = ingName.replace(/^Pure /i, '').trim(); // Remove "Pure"
+
+           if(!masterDict[ingName]) {
+               masterDict[ingName] = [];
+           }
+           masterDict[ingName].push(amountStr);
+        });
+      });
+
+      let html = `<h3 class="font-serif font-bold text-xl text-emerald-950 mb-4 flex items-center gap-2 border-b border-emerald-200 pb-2">
+                    <svg aria-hidden="true" class="w-5 h-5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                    Master Grocery List
+                  </h3>
+                  <ul class="space-y-3">`;
+      
+      const sortedIngredients = Object.keys(masterDict).sort();
+
+      sortedIngredients.forEach(ing => {
+          const amounts = masterDict[ing].join(' <span class="text-amber-500 font-black">+</span> ');
+          html += `<li class="flex justify-between items-center text-sm border-b border-emerald-100/50 pb-2">
+                      <span class="font-medium text-gray-800 pr-4">${ing}</span>
+                      <span class="font-bold text-emerald-700 text-right whitespace-nowrap bg-white border border-emerald-100 px-2 py-1 rounded shadow-sm">${amounts}</span>
+                   </li>`;
+      });
+
+      html += `</ul>`;
+      masterIngList.innerHTML = html;
     }
 
     function updateCartUI() {
@@ -364,23 +402,19 @@
 
       if (cart.length === 0) {
         cartContent.innerHTML = `<p class="text-gray-500 text-center py-8">Your cart is empty.</p>`;
-        masterIngList.innerHTML = `<p class="text-gray-500 text-center py-8">Add items to view prep list.</p>`;
         document.getElementById('download-all-btn').disabled = true;
+        compileMasterGroceryList();
         return;
       }
 
       document.getElementById('download-all-btn').disabled = false;
       cartContent.innerHTML = '';
-      
-      // Rebuild Master Prep List
-      let prepListHtml = `<h3 class="font-serif font-bold text-xl text-emerald-900 border-b border-emerald-200 pb-2 mb-2">Master Prep List</h3><ul class="text-sm space-y-4">`;
 
       cart.forEach((cartItem) => {
         const item = cartItem.item;
         
-        // Render Cart Item Card
         const cartCard = document.createElement('div');
-        cartCard.className = "bg-gray-50 border border-gray-200 rounded-2xl p-4 flex flex-col gap-4";
+        cartCard.className = "bg-white border border-gray-200 rounded-2xl p-4 flex flex-col gap-4 shadow-sm";
         cartCard.setAttribute("role", "listitem");
         
         cartCard.innerHTML = `
@@ -394,31 +428,16 @@
                  </div>
                </div>
             </div>
+            <button onclick="downloadSingleRecipe('${item.id}')" aria-label="Download Recipe for ${item.name}" class="btn btn-sm btn-outline btn-success rounded-lg text-xs shrink-0" title="Download Recipe">
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 hidden sm:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+              Recipe
+            </button>
           </div>
         `;
         cartContent.appendChild(cartCard);
-
-        // Render Prep List Section for this item
-        prepListHtml += `
-          <li class="bg-white p-3 rounded-xl border border-emerald-100 shadow-sm">
-            <div class="font-bold text-emerald-950 mb-2 flex justify-between items-center">
-              ${item.name} 
-              <span class="text-xs font-black text-white bg-amber-500 px-2 py-0.5 rounded-full shadow-sm">x${cartItem.quantity} batches</span>
-            </div>
-            <ul class="space-y-1.5 pl-2 border-l-2 border-emerald-200">
-              ${item.ingredients.map(ing => `
-                <li class="flex items-start text-gray-700 leading-snug text-xs">
-                  <span class="mr-2 text-emerald-500 mt-0.5">●</span>
-                  <span>${parseIngredientString(ing, cartItem.quantity)}</span>
-                </li>
-              `).join('')}
-            </ul>
-          </li>
-        `;
       });
-
-      prepListHtml += `</ul>`;
-      masterIngList.innerHTML = prepListHtml;
+      
+      compileMasterGroceryList();
     }
 
     function formatRecipeText(item) {
@@ -474,14 +493,20 @@ Total Fat: ${item.nutrition.totalFat}g | Protein: ${item.nutrition.protein}g
     function downloadSingleRecipe(itemId) {
       const item = menuData.find(i => i.id === itemId);
       if(!item) return;
-      downloadTextFile(`Recipe_${item.name.replace(/\\s+/g, '_')}.txt`, formatRecipeText(item));
+      downloadTextFile(`Recipe_${item.name.replace(/\s+/g, '_')}.txt`, formatRecipeText(item));
     }
 
     function downloadAllRecipes() {
       if(cart.length === 0) return;
-      let fullContent = "VEDAKSHEMA CLINICAL CONFECTIONS - SELECTED RECIPES\n\n";
+      
+      let fullContent = "VEDAKSHEMA CLINICAL CONFECTIONS\n\nMASTER GROCERY LIST:\n------------------------------------------------------\n";
+      
+      const masterList = document.getElementById('master-ingredient-list').innerText;
+      fullContent += masterList.replace('Master Grocery List\n', '') + "\n\n";
+      
+      fullContent += "SELECTED RECIPES:\n------------------------------------------------------\n\n";
       cart.forEach(cartItem => { fullContent += formatRecipeText(cartItem.item) + "\n\n"; });
-      downloadTextFile("VedaKshema_Cart_Recipes.txt", fullContent);
+      downloadTextFile("VedaKshema_Master_Prep_List.txt", fullContent);
     }
 
     function filterCategory(category) {

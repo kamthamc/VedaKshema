@@ -133,6 +133,7 @@
     "name": "Red Rice & Almond Kozhukattai",
     "category": "sweet",
     "healthFocus": ["Diabetes Control"],
+    "image": "images/kozhukattai-01.png",
     "tags": ["Steamed", "High Fiber", "Low GI"],
     "description": "Steamed dumplings with a 60/40 red rice and almond shell, stuffed with juicy coconut and cardamom.",
     "sweetener": "Allulose",
@@ -301,6 +302,7 @@
     "name": "Elaneer (Tender Coconut) Payasam",
     "category": "sweet",
     "healthFocus": ["Diabetes Control", "Hyperthyroidism"],
+    "image": "images/coconut-pudding-01.png",
     "tags": ["Ultra Cooling", "Vegan", "Electrolytes"],
     "description": "A delicate, chilled dessert soup made purely from tender coconut flesh and its water, thickened with coconut cream.",
     "sweetener": "Pure Stevia Leaf Extract",
@@ -341,6 +343,7 @@
     "name": "Thengai (Fresh Coconut) Burfi",
     "category": "sweet",
     "healthFocus": ["Diabetes Control", "Hypothyroidism"],
+    "image":"images/coconut-fudge-01.png",
     "tags": ["Low Carb", "Dairy Free", "MCTs"],
     "description": "Classic South Indian coconut fudge squares, retaining their brilliant white color and juicy bite without sugar.",
     "sweetener": "Allulose",
@@ -678,7 +681,7 @@
     },
     "ingredients": [
       "2 cups Whole Raw Cashews",
-      "3 tbsp Traditional Idli Podi (Lentil Spice powder)",
+      "3 tbsp Traditional Idli Podi",
       "1 tsp Pure A2 Ghee",
       "A pinch of Pink Salt"
     ],
@@ -717,7 +720,7 @@
     },
     "ingredients": [
       "1 cup Ragi (Finger Millet) Flour",
-      "0.25 cup Urad Dal Powder (roasted)",
+      "0.25 cup Urad Dal Powder",
       "1 tsp White Sesame Seeds",
       "1 tbsp Cold-pressed Coconut Oil"
     ],
