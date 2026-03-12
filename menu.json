@@ -1,0 +1,981 @@
+[
+  {
+    "id": "ladoo-01",
+    "name": "Sprouted Ragi & Almond Ladoo",
+    "category": "sweet",
+    "healthFocus": ["Diabetes Control", "Hyperthyroidism"],
+    "image": "images/ladoo-01.png",
+    "tags": ["Calcium Rich", "Low GI", "Vata-Shamaka"],
+    "description": "Deeply roasted sprouted finger millet and roasted gram, bound with pure A2 ghee and sweetened naturally.",
+    "sweetener": "Pure Monk Fruit Extract",
+    "prepTime": "25 mins",
+    "expertNotes": {
+      "chef": "Because Monk Fruit provides zero volume, we increase the Ragi and Gram flours to create the body. Deep roasting lowers water activity naturally.",
+      "chemist": "Net carbs are minimized. The high dietary fiber in sprouted Ragi blunts the enzymatic breakdown of the remaining complex carbohydrates.",
+      "ayurveda": "Ragi is cooling and goitrogenic, actively counteracting the Pitta excess and rapid metabolism of Hyperthyroidism."
+    },
+    "ingredients": [
+      "1.5 cups Sprouted Ragi (Finger Millet) Flour",
+      "0.5 cup Pottukadalai (Roasted Gram) Flour",
+      "0.33 cup Pure A2 Ghee",
+      "0.25 tsp Pure Monk Fruit Extract Powder",
+      "1 tsp Cardamom Powder",
+      "2 tbsp Crushed Almonds"
+    ],
+    "instructions": [
+      "In a heavy-bottomed pan, dry roast the sprouted ragi flour on low heat for 10-12 minutes until a nutty aroma appears.",
+      "Dry roast the pottukadalai flour for 3-4 minutes. Mix both flours together in a large bowl.",
+      "Melt the ghee gently. Add the monk fruit extract and cardamom powder to the warm ghee.",
+      "Pour the warm ghee over the flour mixture. Add the crushed almonds.",
+      "Mix thoroughly. While the mixture is still warm, take small portions and press firmly to shape into round ladoos.",
+      "Allow to cool completely before storing in an airtight container."
+    ],
+    "nutrition": {
+      "servingSize": "1 Ladoo (30g)",
+      "calories": 115,
+      "totalFat": 6.5,
+      "saturatedFat": 3.5,
+      "totalCarbs": 11.0,
+      "fiber": 2.5,
+      "netCarbs": 8.5,
+      "sugars": 0.2,
+      "protein": 3.2
+    }
+  },
+  {
+    "id": "halwa-01",
+    "name": "Kashi (Ash Gourd) Halwa",
+    "category": "sweet",
+    "healthFocus": ["Diabetes Control", "Hyperthyroidism"],
+    "image": "images/halwa-01.png",
+    "tags": ["Ultra Cooling", "Zero Net Carbs", "Pitta-Shamaka"],
+    "description": "A melt-in-the-mouth, ultra-hydrating traditional halwa infused with saffron and edible camphor.",
+    "sweetener": "Pure Stevia Leaf Extract",
+    "prepTime": "40 mins",
+    "expertNotes": {
+      "chef": "Slowly cooking the ash gourd in its own juices before adding ghee is critical. The edible camphor gives it an authentic temple-prasadam aroma.",
+      "chemist": "Ash gourd is over 95% water and fiber. The stevia glycosides provide sweetness without participating in any human metabolic pathways.",
+      "ayurveda": "Kushmanda (Ash Gourd) is the ultimate Pitta-pacifying vegetable. It aggressively cools the metabolic fire of Hyperthyroidism."
+    },
+    "ingredients": [
+      "3 cups Grated Ash Gourd (squeeze water out and reserve)",
+      "3 tbsp Pure A2 Ghee",
+      "0.5 tsp Pure Stevia Leaf Extract Powder",
+      "A pinch of Saffron (soaked in warm water)",
+      "A tiny pinch of Edible Camphor (Pachai Karpooram)",
+      "1 tbsp Roasted Cashews"
+    ],
+    "instructions": [
+      "Grate the ash gourd and squeeze out the excess water. (You can drink the water!).",
+      "In a pan, cook the grated ash gourd on medium heat until raw smell disappears and moisture evaporates.",
+      "Add the ghee and sauté for 10-15 minutes until it becomes glossy and translucent.",
+      "Stir in the pure stevia powder and saffron water. Cook until the mixture thickens and leaves the sides of the pan.",
+      "Turn off the heat. Stir in the edible camphor and top with ghee-roasted cashews."
+    ],
+    "nutrition": {
+      "servingSize": "0.5 Cup (60g)",
+      "calories": 110,
+      "totalFat": 11.0,
+      "saturatedFat": 7.0,
+      "totalCarbs": 3.5,
+      "fiber": 1.5,
+      "netCarbs": 2.0,
+      "sugars": 1.0,
+      "protein": 0.8
+    }
+  },
+  {
+    "id": "payasam-01",
+    "name": "Pasi Paruppu Coconut Payasam",
+    "category": "sweet",
+    "healthFocus": ["Diabetes Control", "Hypothyroidism"],
+    "image": "images/payasam-01.png",
+    "tags": ["MCT Fats", "Protein Rich", "Dairy Free"],
+    "description": "Creamy, rich moong dal pudding made with thick coconut milk instead of dairy.",
+    "sweetener": "Pure Monk Fruit Extract",
+    "prepTime": "30 mins",
+    "expertNotes": {
+      "chef": "Replacing dairy milk with thick coconut milk gives an incredibly luxurious mouthfeel. Do not boil vigorously after adding coconut milk to prevent curdling.",
+      "chemist": "Coconut milk is rich in Medium-Chain Triglycerides (MCTs), which are absorbed intact and used for direct energy, boosting a sluggish metabolism associated with Hypothyroidism.",
+      "ayurveda": "Moong dal is balancing for all three doshas. It provides heavy, grounding nourishment."
+    },
+    "ingredients": [
+      "0.5 cup Yellow Moong Dal (Pasi Paruppu)",
+      "1.5 cups Thin Coconut Milk",
+      "0.5 cup Thick Coconut Milk",
+      "0.25 tsp Pure Monk Fruit Extract",
+      "0.5 tsp Cardamom Powder",
+      "1 tbsp Ghee",
+      "1 tbsp Cashews and fresh coconut slivers"
+    ],
+    "instructions": [
+      "Dry roast the moong dal until lightly golden and aromatic.",
+      "Pressure cook the roasted dal with water until very soft and mushy. Mash it well.",
+      "In a heavy pan, add the mashed dal and the thin coconut milk. Simmer gently for 5 minutes.",
+      "Add the monk fruit extract and cardamom powder. Stir well.",
+      "Lower the heat entirely. Stir in the thick coconut milk and heat gently for 2 minutes (do not boil).",
+      "In a separate small pan, heat ghee and fry cashews and coconut slivers until golden. Pour over the payasam."
+    ],
+    "nutrition": {
+      "servingSize": "1 Bowl (150ml)",
+      "calories": 145,
+      "totalFat": 9.5,
+      "saturatedFat": 8.0,
+      "totalCarbs": 11.0,
+      "fiber": 2.0,
+      "netCarbs": 9.0,
+      "sugars": 1.5,
+      "protein": 4.5
+    }
+  },
+  {
+    "id": "kozhukattai-01",
+    "name": "Red Rice & Almond Kozhukattai",
+    "category": "sweet",
+    "healthFocus": ["Diabetes Control"],
+    "tags": ["Steamed", "High Fiber", "Low GI"],
+    "description": "Steamed dumplings with a 60/40 red rice and almond shell, stuffed with juicy coconut and cardamom.",
+    "sweetener": "Allulose",
+    "prepTime": "45 mins",
+    "expertNotes": {
+      "chef": "Allulose is critical here. It caramelizes inside the steamer exactly like jaggery, giving you that authentic, gooey, dripping center.",
+      "chemist": "Replacing 40% of the rice flour with almond flour significantly reduces the glycemic index of the outer shell. Allulose is a rare sugar that exits the body unmetabolized.",
+      "ayurveda": "Steamed foods are inherently easy to digest (Laghu). Red rice (Rakta Sali) is considered therapeutically superior to white rice in ancient texts."
+    },
+    "ingredients": [
+      "1 cup Hand-pounded Red Rice Flour",
+      "0.5 cup Blanched Almond Flour",
+      "1 tsp Sesame Oil",
+      "1 cup Fresh Grated Coconut",
+      "0.5 cup Allulose",
+      "0.5 tsp Cardamom Powder"
+    ],
+    "instructions": [
+      "For the filling: In a pan, mix grated coconut and allulose. Cook on low heat until it becomes sticky and comes together. Add cardamom, mix, and let it cool. Roll into small balls.",
+      "For the dough: Dry roast red rice flour lightly. Mix with almond flour. Gradually add boiling water and a tsp of sesame oil, mixing with a spoon until it forms a soft dough. Knead well when warm.",
+      "Take a small lemon-sized ball of dough. Flatten it into a cup shape using your fingers (grease hands with a little oil).",
+      "Place the coconut-allulose ball inside and seal the edges completely.",
+      "Place the dumplings in a steamer and steam for 10-12 minutes until the outer layer is shiny and non-sticky.",
+      "Serve warm."
+    ],
+    "nutrition": {
+      "servingSize": "2 Dumplings (80g)",
+      "calories": 135,
+      "totalFat": 6.0,
+      "saturatedFat": 2.5,
+      "totalCarbs": 17.0,
+      "fiber": 4.5,
+      "netCarbs": 12.5,
+      "sugars": 1.0,
+      "protein": 3.8
+    }
+  },
+  {
+    "id": "neermor-01",
+    "name": "Therapeutic Spiced Neer Mor",
+    "category": "beverage",
+    "healthFocus": ["Diabetes Control", "Gut Health"],
+    "tags": ["Gut Health", "Electrolytes", "Zero GI"],
+    "description": "Heavily diluted, savory A2 buttermilk infused with digestion-enhancing spices.",
+    "sweetener": "None (Savory)",
+    "prepTime": "10 mins",
+    "expertNotes": {
+      "chef": "Churning the yogurt removes the heavy butterfat. The infusion of fresh crushed ginger and curry leaves provides a sharp, refreshing bite.",
+      "chemist": "Using Himalayan Pink Salt avoids the added iodine of commercial table salt, which is critical for hyperthyroid patients needing to limit iodine intake.",
+      "ayurveda": "Takra (buttermilk) is considered nectar on earth. It balances Vata and Kapha, improves Agni (digestion), and does not heat the body like pure curd does."
+    },
+    "ingredients": [
+      "0.5 cup A2 Curd (Yogurt) - thoroughly churned",
+      "1.5 cups Chilled Water",
+      "1 tsp Fresh Ginger (crushed)",
+      "0.5 tsp Roasted Cumin (Jeera) Powder",
+      "1 sprig Fresh Curry Leaves (torn)",
+      "1 tbsp Fresh Coriander Leaves (chopped)",
+      "A pinch of Himalayan Pink Salt"
+    ],
+    "instructions": [
+      "Place the curd in a large vessel and whisk vigorously until smooth.",
+      "Add the chilled water and whisk again to create a highly diluted consistency.",
+      "Crush the ginger lightly in a mortar and pestle to release its juices, and add to the buttermilk.",
+      "Add the roasted cumin powder, torn curry leaves, chopped coriander, and pink salt.",
+      "Mix well and let it rest for 10 minutes for the flavors to infuse.",
+      "Serve chilled or at room temperature."
+    ],
+    "nutrition": {
+      "servingSize": "1 Glass (250ml)",
+      "calories": 28,
+      "totalFat": 1.2,
+      "saturatedFat": 0.8,
+      "totalCarbs": 2.5,
+      "fiber": 0.0,
+      "netCarbs": 2.5,
+      "sugars": 2.5,
+      "protein": 1.8
+    }
+  },
+  {
+    "id": "panakam-01",
+    "name": "Rose & Cardamom Panakam",
+    "category": "beverage",
+    "healthFocus": ["Diabetes Control", "Hyperthyroidism"],
+    "tags": ["Electrolytes", "Ultra Cooling", "Zero Carb"],
+    "description": "A floral, cooling adaptation of the festive Panakam, replacing heating ginger with soothing rose water.",
+    "sweetener": "Pure Stevia Leaf Extract",
+    "prepTime": "5 mins",
+    "expertNotes": {
+      "chef": "Traditional Panakam relies heavily on dry ginger and black pepper. We pivot to edible rose water and lemon for a sophisticated, floral refreshment.",
+      "chemist": "Provides instant hydration and Vitamin C without demanding any insulin response. Net carbohydrates are virtually zero.",
+      "ayurveda": "Rose (Roja Poo) is one of the most potent Pitta-pacifying botanicals. It rapidly cools the blood and calms the hyperactive nervous system associated with Hyperthyroidism."
+    },
+    "ingredients": [
+      "2 cups Filtered Water",
+      "1.5 tbsp Edible Rose Water (Roja Poo extract, unsweetened)",
+      "1 tbsp Fresh Lemon Juice",
+      "0.5 tsp Green Cardamom Powder",
+      "0.25 tsp Pure Stevia Leaf Extract Powder",
+      "A pinch of Himalayan Pink Salt"
+    ],
+    "instructions": [
+      "In a pitcher, combine the filtered water and fresh lemon juice.",
+      "Add the edible rose water and green cardamom powder.",
+      "Stir in the pure stevia leaf powder and a tiny pinch of pink salt (to balance the sweetness).",
+      "Mix thoroughly until the stevia is completely dissolved.",
+      "Chill in the refrigerator for at least 30 minutes to allow the cardamom and rose to marry.",
+      "Serve cold."
+    ],
+    "nutrition": {
+      "servingSize": "1 Glass (250ml)",
+      "calories": 8,
+      "totalFat": 0.0,
+      "saturatedFat": 0.0,
+      "totalCarbs": 1.5,
+      "fiber": 0.0,
+      "netCarbs": 1.5,
+      "sugars": 0.0,
+      "protein": 0.0
+    }
+  },
+  {
+    "id": "mysorepak-01",
+    "name": "Badam & Besan Mysore Pak",
+    "category": "sweet",
+    "healthFocus": ["Diabetes Control", "Hypothyroidism"],
+    "tags": ["Keto-Friendly", "High Protein", "Ojas Building"],
+    "description": "The royal porous classic, reconstructed with almond flour and allulose, drenched in hot A2 ghee.",
+    "sweetener": "Allulose",
+    "prepTime": "35 mins",
+    "expertNotes": {
+      "chef": "Pouring hot ghee over the roasting besan-almond-allulose mixture creates the iconic 'honeycomb' texture. Allulose is the only natural sweetener that caramelizes correctly for this.",
+      "chemist": "Replacing 75% of the traditional chickpea flour with blanched almond flour slashes the glycemic load while providing Zinc and Selenium vital for Hypothyroid function.",
+      "ayurveda": "Provides deep 'Brimhana' (grounding nourishment). Almonds build 'Ojas' (vitality), crucial for repairing tissue loss."
+    },
+    "ingredients": [
+      "1 cup Blanched Almond Flour (very fine)",
+      "0.33 cup Besan (Roasted Gram Flour)",
+      "0.75 cup Pure A2 Ghee",
+      "0.75 cup Allulose",
+      "A pinch of Turmeric"
+    ],
+    "instructions": [
+      "Sift the almond flour and besan together to remove lumps. Dry roast lightly for 2 minutes.",
+      "In a heavy pan, melt allulose with 1/4 cup water until it reaches a sticky, one-string consistency.",
+      "Slowly whisk the flour mixture into the syrup to ensure no lumps form.",
+      "In a separate burner, heat the ghee until it is smoking hot.",
+      "Gradually pour the hot ghee into the flour mixture, one ladle at a time, stirring continuously. It will froth up.",
+      "Once the mixture becomes porous and leaves the sides of the pan, immediately pour into a greased tray. Cut while still warm."
+    ],
+    "nutrition": {
+      "servingSize": "1 Piece (35g)",
+      "calories": 165,
+      "totalFat": 14.5,
+      "saturatedFat": 6.5,
+      "totalCarbs": 6.0,
+      "fiber": 2.5,
+      "netCarbs": 3.5,
+      "sugars": 0.5,
+      "protein": 3.5
+    }
+  },
+  {
+    "id": "elaneer-01",
+    "name": "Elaneer (Tender Coconut) Payasam",
+    "category": "sweet",
+    "healthFocus": ["Diabetes Control", "Hyperthyroidism"],
+    "tags": ["Ultra Cooling", "Vegan", "Electrolytes"],
+    "description": "A delicate, chilled dessert soup made purely from tender coconut flesh and its water, thickened with coconut cream.",
+    "sweetener": "Pure Stevia Leaf Extract",
+    "prepTime": "15 mins",
+    "expertNotes": {
+      "chef": "The secret is zero cooking. Heating tender coconut water destroys its delicate flavor and enzymes. We simply blend and chill.",
+      "chemist": "Contains zero complex starches or grains. It relies entirely on Medium-Chain Triglycerides (MCTs) and natural isotonic electrolytes.",
+      "ayurveda": "Elaneer is considered 'Amrita' (nectar) for Pitta disorders. It instantly quenches the internal heat and systemic inflammation characteristic of Hyperthyroidism."
+    },
+    "ingredients": [
+      "1 cup Tender Coconut Flesh (soft and jelly-like)",
+      "1 cup Tender Coconut Water",
+      "0.5 cup Thick Coconut Milk",
+      "0.25 tsp Pure Stevia Leaf Extract Powder",
+      "A pinch of Green Cardamom Powder"
+    ],
+    "instructions": [
+      "Take half of the tender coconut flesh and chop it into fine, bite-sized pieces. Set aside.",
+      "In a blender, combine the remaining coconut flesh, tender coconut water, thick coconut milk, and stevia.",
+      "Blend until completely smooth and creamy.",
+      "Pour the mixture into a bowl. Stir in the chopped coconut pieces and cardamom powder.",
+      "Refrigerate for at least 2 hours before serving. Must be served chilled."
+    ],
+    "nutrition": {
+      "servingSize": "1 Bowl (150ml)",
+      "calories": 120,
+      "totalFat": 10.0,
+      "saturatedFat": 8.5,
+      "totalCarbs": 6.5,
+      "fiber": 2.0,
+      "netCarbs": 4.5,
+      "sugars": 3.0,
+      "protein": 1.5
+    }
+  },
+  {
+    "id": "burfi-01",
+    "name": "Thengai (Fresh Coconut) Burfi",
+    "category": "sweet",
+    "healthFocus": ["Diabetes Control", "Hypothyroidism"],
+    "tags": ["Low Carb", "Dairy Free", "MCTs"],
+    "description": "Classic South Indian coconut fudge squares, retaining their brilliant white color and juicy bite without sugar.",
+    "sweetener": "Allulose",
+    "prepTime": "30 mins",
+    "expertNotes": {
+      "chef": "Allulose mimics sucrose perfectly as it cools, allowing the burfi to set firmly with a slight crystalline bite, rather than turning into mush.",
+      "chemist": "The high fiber and fat content of fresh coconut naturally slows gastric emptying. The MCTs provide an immediate metabolic boost beneficial for Hypothyroidism.",
+      "ayurveda": "Coconut is 'Snigdha' (unctuous/oily) and 'Sheeta' (cooling), making it the perfect ingredient to balance both Vata (dryness) and Pitta (heat)."
+    },
+    "ingredients": [
+      "2 cups Freshly Grated Coconut (white part only)",
+      "1 cup Allulose",
+      "1 tbsp Pure A2 Ghee (or Coconut Oil)",
+      "0.5 tsp Cardamom Powder",
+      "1 tbsp Slivered Pistachios"
+    ],
+    "instructions": [
+      "In a heavy-bottomed pan, add the freshly grated coconut and roast on low heat for 3-4 minutes to remove excess moisture. Do not let it brown.",
+      "Add the allulose to the pan. It will begin to melt and release moisture from the coconut.",
+      "Cook on medium-low heat, stirring continuously, until the mixture thickens and leaves the sides of the pan (about 15-20 minutes).",
+      "Stir in the ghee and cardamom powder. Mix well for another 2 minutes.",
+      "Transfer the mixture to a greased tray, flatten it with a spatula, and garnish with pistachios.",
+      "Allow it to cool and set completely before cutting into squares."
+    ],
+    "nutrition": {
+      "servingSize": "1 Square (40g)",
+      "calories": 95,
+      "totalFat": 8.5,
+      "saturatedFat": 7.5,
+      "totalCarbs": 4.5,
+      "fiber": 2.5,
+      "netCarbs": 2.0,
+      "sugars": 1.0,
+      "protein": 1.0
+    }
+  },
+  {
+    "id": "nannari-01",
+    "name": "Clinical Nannari (Sarsaparilla) Sarbath",
+    "category": "beverage",
+    "healthFocus": ["Diabetes Control", "Hyperthyroidism"],
+    "tags": ["Blood Purifier", "Zero Calorie", "Pitta-Shamaka"],
+    "description": "An ancient, aromatic root infusion balanced with fresh lime. Earthy, refreshing, and deeply therapeutic.",
+    "sweetener": "Pure Monk Fruit Extract",
+    "prepTime": "Overnight + 10 mins",
+    "expertNotes": {
+      "chef": "Commercial Nannari syrups are 90% liquid sugar. We boil the raw, dried roots to extract the pure essential oils, then sweeten the concentrate with Monk Fruit.",
+      "chemist": "Contains zero digestible carbohydrates. Sarsaparilla root is rich in saponins and phytosterols which act as natural anti-inflammatory agents.",
+      "ayurveda": "Nannari is highly revered in Siddha medicine for purifying the blood and rapidly cooling the body, highly recommended for hyperthyroid heat flashes."
+    },
+    "ingredients": [
+      "50 g Dried Nannari (Indian Sarsaparilla) Roots",
+      "4 cups Water",
+      "2 tbsp Fresh Lime Juice",
+      "0.25 tsp Pure Monk Fruit Extract Powder"
+    ],
+    "instructions": [
+      "Wash the Nannari roots thoroughly. Crush them slightly using a mortar and pestle to expose the inner core.",
+      "Soak the crushed roots in 4 cups of water overnight.",
+      "The next day, boil the water with the roots until the liquid reduces to half (about 2 cups). Strain and let the dark concentrate cool.",
+      "Add the pure Monk Fruit extract to the warm concentrate until dissolved.",
+      "To serve: Pour 3 tbsp of the concentrate into a tall glass. Add fresh lime juice, ice cubes, and top with chilled water."
+    ],
+    "nutrition": {
+      "servingSize": "1 Glass (250ml)",
+      "calories": 6,
+      "totalFat": 0.0,
+      "saturatedFat": 0.0,
+      "totalCarbs": 1.5,
+      "fiber": 0.0,
+      "netCarbs": 1.5,
+      "sugars": 0.5,
+      "protein": 0.0
+    }
+  },
+  {
+    "id": "vettiver-01",
+    "name": "Vettiver (Khus) Herbal Hydrator",
+    "category": "beverage",
+    "healthFocus": ["Diabetes Control", "Hyperthyroidism"],
+    "tags": ["Stress Relief", "Zero Sugar", "Hydration"],
+    "description": "Water infused with aromatic Vettiver roots. Earthy, woody, and intensely calming for the nervous system.",
+    "sweetener": "None",
+    "prepTime": "Overnight",
+    "expertNotes": {
+      "chef": "Vettiver must never be boiled, otherwise it releases bitter tannins. Cold infusion over 12 hours extracts the delicate woody notes perfectly.",
+      "chemist": "This is essentially flavored water with zero metabolic footprint. The volatile essential oils extracted provide the physiological benefits.",
+      "ayurveda": "Vettiver is a profound nervine relaxant. It pacifies the hyperactive Vata dosha, reducing anxiety, rapid heartbeat, and tremors associated with Hyperthyroidism."
+    },
+    "ingredients": [
+      "15 g Cleaned Vettiver (Khus) Roots",
+      "1 liter Filtered Water"
+    ],
+    "instructions": [
+      "Wash the vettiver roots thoroughly under running water to remove any dirt.",
+      "Place the roots in a clay pot or glass pitcher.",
+      "Pour 1 liter of filtered room-temperature water over the roots.",
+      "Cover and let it steep overnight (8-12 hours).",
+      "The water will turn slightly yellowish and highly aromatic.",
+      "Serve chilled or at room temperature throughout the day."
+    ],
+    "nutrition": {
+      "servingSize": "1 Glass (250ml)",
+      "calories": 0,
+      "totalFat": 0.0,
+      "saturatedFat": 0.0,
+      "totalCarbs": 0.0,
+      "fiber": 0.0,
+      "netCarbs": 0.0,
+      "sugars": 0.0,
+      "protein": 0.0
+    }
+  },
+  {
+    "id": "kaju-katli-generic",
+    "name": "Clinical Cashew Diamond Fudge",
+    "category": "sweet",
+    "healthFocus": ["Diabetes Control", "Hypothyroidism"],
+    "tags": ["Vegan", "Low-Carb", "Zero-Spike"],
+    "description": "A refined, generic recreation of the classic cashew fudge. Rich, melt-in-the-mouth, and adorned with pure silver varq.",
+    "sweetener": "Allulose",
+    "prepTime": "25 mins",
+    "expertNotes": {
+      "chef": "Cashew dough requires exact temperature control. Allulose mimics sucrose perfectly in the pan, allowing the fudge to achieve that signature soft-yet-firm diamond snap without graininess.",
+      "chemist": "Cashews have a naturally low glycemic index (25) and are rich in Zinc, a mineral critical for the conversion of T4 to active T3 in Hypothyroidism.",
+      "ayurveda": "Cashews (Kaju) are deeply nourishing (Brimhana) and help combat the tissue depletion and fatigue, while balancing Vata dosha."
+    },
+    "ingredients": [
+      "2 cups Premium Whole Cashews",
+      "1 cup Allulose",
+      "0.5 cup Water",
+      "1 tsp Edible Rose Water",
+      "1 tsp Coconut Oil"
+    ],
+    "instructions": [
+      "Pulse the cashews in a blender to form a fine powder. Do not over-blend, or it will release oil and turn into cashew butter. Sift the powder.",
+      "In a non-stick pan, combine Allulose and water. Heat on medium until the Allulose completely dissolves and forms a slightly sticky syrup.",
+      "Lower the heat and fold in the cashew powder. Stir continuously to prevent lumps.",
+      "Cook until the mixture thickens and leaves the sides of the pan, forming a soft dough.",
+      "Turn off the heat, add rose water, and let it cool slightly. Knead the warm dough between two sheets of greased parchment paper until smooth.",
+      "Roll it flat, apply the silver leaf, and cut into classic diamond shapes."
+    ],
+    "nutrition": {
+      "servingSize": "2 Pieces (30g)",
+      "calories": 140,
+      "totalFat": 11.0,
+      "saturatedFat": 2.0,
+      "totalCarbs": 9.0,
+      "fiber": 1.0,
+      "netCarbs": 4.0,
+      "sugars": 1.5,
+      "protein": 4.5
+    }
+  },
+  {
+    "id": "almond-crunch-01",
+    "name": "Twice-Baked Almond Crunch Sticks",
+    "category": "sweet",
+    "healthFocus": ["Diabetes Control", "Hypothyroidism"],
+    "tags": ["Crunchy", "High Protein", "Keto"],
+    "description": "Thin, crisp almond batons loaded with slivered nuts, baked twice for a shattering crunch without the sugar glass.",
+    "sweetener": "Monk Fruit Extract",
+    "prepTime": "45 mins",
+    "expertNotes": {
+      "chef": "Standard crispy nut sticks use butter and sugar to crisp up. We use aquafaba (chickpea water) as a binder to create a hyper-crunchy texture without adding any glycemic load.",
+      "chemist": "This is virtually a zero-carb snack. The high protein and fat content from almonds provides extreme satiety, and the high Tyrosine content directly supports underactive thyroid function.",
+      "ayurveda": "Almonds are considered an ultimate 'Rasayana' (rejuvenator). They build vital energy (Ojas) without heating the body."
+    },
+    "ingredients": [
+      "1.5 cups Blanched Almond Flour",
+      "1 cup Slivered Almonds",
+      "3 tbsp Aquafaba (whipped chickpea water)",
+      "0.25 tsp Pure Monk Fruit Extract Powder",
+      "0.5 tsp Vanilla Extract",
+      "A pinch of Pink Salt"
+    ],
+    "instructions": [
+      "Preheat the oven to 160°C (320°F).",
+      "In a bowl, whip the aquafaba until frothy.",
+      "Fold in the almond flour, Monk Fruit extract, vanilla, and salt until a stiff dough forms.",
+      "Gently mix in the slivered almonds, ensuring they are evenly distributed without breaking.",
+      "Place the dough on a parchment-lined baking sheet. Place another parchment on top and roll it out into a thin rectangle (about 1/4 inch thick).",
+      "Bake for 15 minutes. Remove from oven, cut into thin sticks, separate them slightly, and bake for another 10-15 minutes until golden and crisp.",
+      "Let them cool completely; they will crisp up further as they cool."
+    ],
+    "nutrition": {
+      "servingSize": "3 Sticks (25g)",
+      "calories": 135,
+      "totalFat": 12.0,
+      "saturatedFat": 1.0,
+      "totalCarbs": 4.5,
+      "fiber": 2.5,
+      "netCarbs": 2.0,
+      "sugars": 1.0,
+      "protein": 5.5
+    }
+  },
+  {
+    "id": "paper-sweet-generic",
+    "name": "Wafer-Thin Rice Starch & Nut Folds",
+    "category": "sweet",
+    "healthFocus": ["Diabetes Control"],
+    "tags": ["Traditional", "Wafer-Thin", "Low-GI Fill"],
+    "description": "Inspired by regional paper sweets. Ultra-thin rice starch layers stuffed with pure ghee, crushed nuts, and a zero-spike sweetener.",
+    "sweetener": "Stevia & Allulose Blend",
+    "prepTime": "15 mins",
+    "expertNotes": {
+      "chef": "The rice starch paper is so thin it melts instantly on the tongue. By replacing the traditional jaggery powder with powdered Allulose, we retain the authentic sandy texture of the filling.",
+      "chemist": "While the outer wrapper is made of rice starch, an entire sheet weighs less than 2 grams. The glycemic impact is statistically insignificant when paired with the high fat (ghee) and zero-GI filling.",
+      "ayurveda": "Ghee is cooling (Sheeta virya) and pacifies Pitta. It acts as a 'Yogavahi'—a carrier that drives the nutritional benefits of the nuts deep into the tissues without triggering insulin."
+    },
+    "ingredients": [
+      "10 Ultra-thin Edible Rice Starch Sheets",
+      "0.5 cup Pure A2 Ghee (melted)",
+      "0.75 cup Powdered Allulose",
+      "0.25 tsp Pure Stevia Powder",
+      "0.5 cup Crushed Pistachios and Cashews",
+      "1 tsp Cardamom Powder"
+    ],
+    "instructions": [
+      "In a bowl, mix the powdered Allulose, Stevia, crushed nuts, and cardamom powder.",
+      "Lay out one fragile rice starch sheet on a clean, dry surface.",
+      "Using a spoon, drizzle warm melted ghee lightly across the entire sheet.",
+      "Sprinkle a generous layer of the sweetener and nut mixture evenly over the ghee.",
+      "Carefully fold the sides inward, then fold horizontally into a rectangular packet, drizzling a few more drops of ghee to seal the layers.",
+      "Store in an airtight container to maintain the crispness of the paper."
+    ],
+    "nutrition": {
+      "servingSize": "1 Fold (20g)",
+      "calories": 110,
+      "totalFat": 10.0,
+      "saturatedFat": 5.5,
+      "totalCarbs": 4.5,
+      "fiber": 0.5,
+      "netCarbs": 4.0,
+      "sugars": 0.2,
+      "protein": 1.0
+    }
+  },
+  {
+    "id": "snack-makhana-savory",
+    "name": "Curry Leaf & Pepper Foxnuts",
+    "category": "snack",
+    "healthFocus": ["Diabetes Control", "Hypothyroidism", "Gut Health"],
+    "tags": ["Travel Friendly", "Calcium Rich", "Savory"],
+    "description": "Ultra-light, crunchy roasted makhana (foxnuts) tempered with cooling curry leaves and digestive spices.",
+    "sweetener": "None",
+    "prepTime": "15 mins",
+    "expertNotes": {
+      "chef": "Dry roasting on very low heat is the secret. It ensures a shattering crunch that remains stable for weeks in an airtight container, making it the perfect travel companion.",
+      "chemist": "Foxnuts are naturally low-GI. Black pepper contains piperine, which slightly increases thermogenesis, aiding the slow metabolism of Hypothyroidism.",
+      "ayurveda": "This is a perfect Vata-pacifying travel snack. It is light enough not to cause the bloating or heavy digestion often associated with high altitudes or long commutes."
+    },
+    "ingredients": [
+      "3 cups Phool Makhana (Foxnuts)",
+      "1 tbsp A2 Ghee",
+      "0.25 cup Fresh Curry Leaves",
+      "1 tsp Coarsely Ground Black Pepper",
+      "0.5 tsp Turmeric Powder"
+    ],
+    "instructions": [
+      "In a heavy-bottomed pan, dry roast the makhana on low heat for 10-12 minutes until they are crisp enough to easily snap between your fingers.",
+      "Remove the makhana and set aside.",
+      "In the same pan, heat the ghee. Add the fresh curry leaves and fry until they are completely crisp and crackly.",
+      "Add turmeric, black pepper, and pink salt to the ghee. Quickly stir.",
+      "Immediately add the roasted makhana back into the pan and toss thoroughly until every piece is coated in the spiced ghee.",
+      "Let it cool completely before storing."
+    ],
+    "nutrition": {
+      "servingSize": "1 Cup (30g)",
+      "calories": 110,
+      "totalFat": 5.0,
+      "saturatedFat": 2.5,
+      "totalCarbs": 15.0,
+      "fiber": 3.0,
+      "netCarbs": 12.0,
+      "sugars": 0.0,
+      "protein": 3.5
+    }
+  },
+  {
+    "id": "snack-thattai",
+    "name": "Baked Red Rice Thattai",
+    "category": "snack",
+    "healthFocus": ["Diabetes Control"],
+    "tags": ["Gluten Free", "Baked", "Crunchy"],
+    "description": "A clinical update to the classic South Indian cracker. Hand-pounded red rice and roasted gram, baked to a perfect crisp instead of deep-fried.",
+    "sweetener": "None",
+    "prepTime": "40 mins",
+    "expertNotes": {
+      "chef": "We replace deep-frying with slow baking. The dough uses a touch of sesame oil and hot water to mimic the traditional flaky, crispy texture without the excess oil.",
+      "chemist": "Red rice retains the bran layer, offering a slow-release carbohydrate profile. Baking eliminates the trans fats created by prolonged deep-frying at high temperatures.",
+      "ayurveda": "Deep-fried foods severely aggravate Pitta (heat). These baked crackers provide grounding nourishment that prevents travel-induced Vata spikes (anxiety, restlessness)."
+    },
+    "ingredients": [
+      "1 cup Hand-pounded Red Rice Flour",
+      "2 tbsp Roasted Gram Flour (Pottukadalai powder)",
+      "1 tbsp Sesame Oil",
+      "1 tsp Cumin Seeds",
+      "1 tbsp Soaked Chana Dal"
+    ],
+    "instructions": [
+      "Preheat the oven to 170°C (340°F).",
+      "In a bowl, mix the red rice flour, roasted gram flour, cumin seeds, soaked chana dal, salt, and a pinch of hing.",
+      "Heat the sesame oil slightly and pour it over the dry mix. Rub it in with your fingers until it resembles coarse sand.",
+      "Gradually add warm water to knead into a firm, smooth dough.",
+      "Pinch small balls of dough and flatten them into thin discs on a greased parchment paper.",
+      "Prick the discs lightly with a fork so they don't puff up. Bake for 15-18 minutes until golden and crisp."
+    ],
+    "nutrition": {
+      "servingSize": "4 Crackers (40g)",
+      "calories": 145,
+      "totalFat": 4.5,
+      "saturatedFat": 0.5,
+      "totalCarbs": 22.0,
+      "fiber": 3.5,
+      "netCarbs": 18.5,
+      "sugars": 0.0,
+      "protein": 4.0
+    }
+  },
+  {
+    "id": "snack-cashew-podi",
+    "name": "Podi-Spiced Roasted Cashews",
+    "category": "snack",
+    "healthFocus": ["Diabetes Control", "Hypothyroidism"],
+    "tags": ["High Protein", "Spicy", "Travel Friendly"],
+    "description": "Premium whole cashews dry-roasted and generously coated in a traditional lentil-based South Indian 'Gunpowder' (Podi).",
+    "sweetener": "None",
+    "prepTime": "15 mins",
+    "expertNotes": {
+      "chef": "The cashews are lightly dry-roasted first. Tossing them in the lentil podi with just a few drops of hot ghee creates a flavorful, savory crust that clings to the nut.",
+      "chemist": "Cashews are rich in heart-healthy monounsaturated fats. The lentil podi coating adds an extra layer of plant protein, making this a highly satiating, zero-spike snack.",
+      "ayurveda": "Cashews are 'Brimhana' (nourishing) and help combat the tissue depletion and exhaustion common in Hypothyroidism, while the spices ignite sluggish digestion."
+    },
+    "ingredients": [
+      "2 cups Whole Raw Cashews",
+      "3 tbsp Traditional Idli Podi (Lentil Spice powder)",
+      "1 tsp Pure A2 Ghee",
+      "A pinch of Pink Salt"
+    ],
+    "instructions": [
+      "Heat a heavy-bottomed pan and dry roast the cashews on low-medium heat for 8-10 minutes until they turn slightly golden and emit a nutty aroma.",
+      "Turn off the heat. Push the cashews to the side of the pan.",
+      "Add the ghee to the center of the warm pan. Once melted, add the Idli Podi and pink salt, stirring quickly for 10 seconds to release the flavors.",
+      "Toss the roasted cashews into the spiced ghee mixture until every nut is well coated.",
+      "Let cool entirely; the podi will adhere firmly to the cashews."
+    ],
+    "nutrition": {
+      "servingSize": "0.25 Cup (35g)",
+      "calories": 180,
+      "totalFat": 14.0,
+      "saturatedFat": 3.0,
+      "totalCarbs": 10.0,
+      "fiber": 1.5,
+      "netCarbs": 8.5,
+      "sugars": 1.5,
+      "protein": 6.5
+    }
+  },
+  {
+    "id": "snack-ragi-murukku",
+    "name": "Air-Fried Ragi Murukku",
+    "category": "snack",
+    "healthFocus": ["Diabetes Control", "Hyperthyroidism"],
+    "tags": ["Calcium Rich", "Zero Trans Fat", "Low GI"],
+    "description": "The iconic South Indian spiral snack, engineered with nutrient-dense finger millet and air-fried for a greaseless crunch.",
+    "sweetener": "None",
+    "prepTime": "35 mins",
+    "expertNotes": {
+      "chef": "Ragi naturally lacks gluten, making piping difficult. We use a boiling-water dough method to gelatinize the starches, allowing it to hold the spiral shape in the air-fryer.",
+      "chemist": "Ragi (Finger Millet) is the highest non-dairy source of bioavailable calcium. The air-frying technique keeps the caloric density low and prevents lipid oxidation.",
+      "ayurveda": "Ragi is cooling in nature and contains natural goitrogens, making it an excellent suppressive snack for overactive high-Pitta individuals."
+    },
+    "ingredients": [
+      "1 cup Ragi (Finger Millet) Flour",
+      "0.25 cup Urad Dal Powder (roasted)",
+      "1 tsp White Sesame Seeds",
+      "1 tbsp Cold-pressed Coconut Oil"
+    ],
+    "instructions": [
+      "In a bowl, mix the Ragi flour, Urad dal powder, sesame seeds, and salt.",
+      "Add the coconut oil and rub it into the flour.",
+      "Gradually add boiling water, mixing with a wooden spoon. Once cool enough to touch, knead into a smooth, non-sticky dough.",
+      "Place the dough into a traditional Murukku press (with a star-shaped nozzle).",
+      "Pipe spirals onto small squares of parchment paper.",
+      "Preheat the air-fryer to 180°C (350°F). Air-fry the murukku spirals for 12-15 minutes until fully crisp. Cool before storing."
+    ],
+    "nutrition": {
+      "servingSize": "3 Spirals (30g)",
+      "calories": 115,
+      "totalFat": 2.5,
+      "saturatedFat": 1.0,
+      "totalCarbs": 20.0,
+      "fiber": 3.5,
+      "netCarbs": 16.5,
+      "sugars": 0.0,
+      "protein": 3.0
+    }
+  },
+  {
+    "id": "snack-sesame-bite",
+    "name": "Crispy Sesame & Coconut Bites",
+    "category": "snack",
+    "healthFocus": ["Diabetes Control", "Hypothyroidism"],
+    "tags": ["Zero Net Carbs", "Keto", "Travel Friendly"],
+    "description": "Miniature, travel-friendly brittle squares made from toasted white sesame and desiccated coconut in a zero-spike glaze.",
+    "sweetener": "Allulose",
+    "prepTime": "20 mins",
+    "expertNotes": {
+      "chef": "Using Allulose cooked exactly to a 'hard-crack' stage allows us to make a travel-friendly chikki (brittle) that won't melt easily in a warm bag or during transit.",
+      "chemist": "A powerhouse of healthy fats. Sesame provides immense calcium, and coconut provides MCTs. The net carbohydrates are incredibly low, under 2g per bite.",
+      "ayurveda": "Tila (Sesame) is considered the ultimate medicine for Vata imbalances, and its warming properties gently stimulate a sluggish thyroid."
+    },
+    "ingredients": [
+      "0.5 cup White Sesame Seeds",
+      "0.5 cup Unsweetened Desiccated Coconut",
+      "0.75 cup Allulose",
+      "1 tbsp Water",
+      "A pinch of Cardamom Powder"
+    ],
+    "instructions": [
+      "Lightly dry roast the sesame seeds and desiccated coconut until fragrant and very slightly golden. Set aside.",
+      "In a heavy-bottomed pan, heat the Allulose and water on medium heat. Do not stir too much. Let it bubble and reach a thick, syrupy consistency (hard-crack stage).",
+      "Quickly fold in the roasted sesame, coconut, and cardamom powder.",
+      "Immediately pour the mixture onto a greased parchment paper and roll it out flat and thin with a greased rolling pin.",
+      "Cut into small square bites while still warm. Let it cool completely until crisp."
+    ],
+    "nutrition": {
+      "servingSize": "2 Bites (25g)",
+      "calories": 125,
+      "totalFat": 11.5,
+      "saturatedFat": 5.5,
+      "totalCarbs": 5.5,
+      "fiber": 4.0,
+      "netCarbs": 1.5,
+      "sugars": 0.5,
+      "protein": 3.0
+    }
+  },
+  {
+    "id": "snack-roasted-moong",
+    "name": "Crunchy Spiced Green Gram",
+    "category": "snack",
+    "healthFocus": ["Diabetes Control", "Gut Health"],
+    "tags": ["High Protein", "Complex Carbs", "Savory"],
+    "description": "Whole green moong beans soaked, dehydrated, and dry-roasted to a perfect crunch. Tossed in digestive spices.",
+    "sweetener": "None",
+    "prepTime": "Overnight + 30 mins",
+    "expertNotes": {
+      "chef": "The secret to the crunch without deep-frying is soaking the beans overnight, drying them thoroughly, and then slow-roasting them on a low flame.",
+      "chemist": "Pure plant protein and highly complex fiber. This snack forces the digestive system to work slowly, maintaining a perfectly flat blood glucose curve for hours.",
+      "ayurveda": "Moong is considered 'Tridoshic'—safe and balancing for all body types. It is incredibly light (Laghu) and easy on the travel-weary stomach."
+    },
+    "ingredients": [
+      "1 cup Whole Green Gram (Moong Beans)",
+      "1 tsp Ghee or Olive Oil",
+      "0.5 tsp Roasted Cumin Powder",
+      "0.25 tsp Dry Mango Powder (Amchur)"
+    ],
+    "instructions": [
+      "Soak the whole green gram in water overnight.",
+      "Drain the water completely and spread the beans on a clean kitchen towel to air-dry for 1-2 hours until no surface moisture remains.",
+      "Heat a wide, heavy-bottomed pan and dry roast the beans on low-medium heat for 20-25 minutes, stirring frequently, until they become completely crisp.",
+      "Turn off the heat. Add the ghee, cumin powder, amchur, and pink salt. Toss well to coat.",
+      "Let the beans cool completely; they will reach maximum crunch once cool."
+    ],
+    "nutrition": {
+      "servingSize": "0.25 Cup (35g)",
+      "calories": 120,
+      "totalFat": 1.5,
+      "saturatedFat": 0.5,
+      "totalCarbs": 21.0,
+      "fiber": 6.5,
+      "netCarbs": 14.5,
+      "sugars": 1.0,
+      "protein": 8.5
+    }
+  },
+  {
+    "id": "snack-jowar-puffs",
+    "name": "Turmeric Jowar (Sorghum) Puffs",
+    "category": "snack",
+    "healthFocus": ["Diabetes Control", "Hypothyroidism", "Gut Health"],
+    "tags": ["Gluten Free", "Thyroid Support", "Light Snack"],
+    "description": "Tiny, tender popped sorghum grains, tossed with a mild blend of anti-inflammatory turmeric and coconut oil.",
+    "sweetener": "None",
+    "prepTime": "10 mins",
+    "expertNotes": {
+      "chef": "Jowar grains pop just like corn but are much smaller, tender, and lack the annoying husks that get stuck in your teeth. A perfect, clean travel snack.",
+      "chemist": "Sorghum (Jowar) is a low-GI ancient grain with zero gluten. Turmeric provides systemic anti-inflammatory benefits, which is vital during stressful travel schedules.",
+      "ayurveda": "Jowar is highly recommended for underactive thyroid health as it is light, easy to digest, and entirely non-goitrogenic."
+    },
+    "ingredients": [
+      "0.5 cup Whole Jowar (Sorghum) grains",
+      "1 tbsp Cold-pressed Coconut Oil",
+      "0.5 tsp Turmeric Powder",
+      "0.25 tsp Black Pepper Powder"
+    ],
+    "instructions": [
+      "Heat a heavy-bottomed pan or pressure cooker (without the lid/weight) on medium-high heat.",
+      "Add a small handful of Jowar grains. Once they start to pop, cover with a glass lid and shake the pan gently until the popping stops.",
+      "Remove the popped grains and repeat for the rest. Do not overcrowd the pan.",
+      "In a separate large bowl, warm the coconut oil slightly and mix in the turmeric, black pepper, and salt.",
+      "Toss the warm popped jowar in the spiced oil until evenly coated yellow."
+    ],
+    "nutrition": {
+      "servingSize": "2 Cups Popped (30g)",
+      "calories": 115,
+      "totalFat": 3.0,
+      "saturatedFat": 2.0,
+      "totalCarbs": 20.0,
+      "fiber": 2.5,
+      "netCarbs": 17.5,
+      "sugars": 0.0,
+      "protein": 3.0
+    }
+  },
+  {
+    "id": "snack-amla-candy",
+    "name": "Sun-Dried Sweet Amla Drops",
+    "category": "snack",
+    "healthFocus": ["Diabetes Control", "Hyperthyroidism", "Gut Health"],
+    "tags": ["Vitamin C", "Nausea Relief", "Zero Spike"],
+    "description": "Chewy, sweet-and-sour Indian Gooseberry candy, naturally sun-dried and preserved with Monk Fruit instead of sugar.",
+    "sweetener": "Monk Fruit Extract",
+    "prepTime": "Days (Sun-Drying) / Active 20 mins",
+    "expertNotes": {
+      "chef": "Instead of boiling the amla in heavy sugar syrup, we lightly blanch them, soak them in a concentrated Monk Fruit infusion, and let the sun slowly dry them into a chewy candy.",
+      "chemist": "Amla is arguably the richest natural source of Vitamin C. Sun-drying preserves the heat-sensitive antioxidants much better than traditional high-heat commercial boiling.",
+      "ayurveda": "The ultimate travel companion. Amla immediately relieves travel nausea (Chardi), cools Pitta heat, and acts as a potent Rasayana to soothe an overactive thyroid."
+    },
+    "ingredients": [
+      "500 g Fresh Amla (Indian Gooseberries)",
+      "1 cup Water",
+      "1 tsp Pure Monk Fruit Extract Powder",
+      "0.25 tsp Black Salt (Kala Namak)"
+    ],
+    "instructions": [
+      "Wash and lightly steam or blanch the whole amla for 10 minutes until they just begin to soften. Let them cool.",
+      "Gently press the amla to separate them into their natural segments (wedges) and discard the seeds.",
+      "In a bowl, dissolve the Monk Fruit extract, black salt, and cumin in the water.",
+      "Toss the amla wedges in the liquid and let them marinate overnight in the refrigerator.",
+      "Drain any excess liquid. Spread the wedges on a clean tray and dry them under direct sunlight for 2-3 days (or in a food dehydrator at low heat) until they are chewy and dry to the touch."
+    ],
+    "nutrition": {
+      "servingSize": "10 Drops (20g)",
+      "calories": 25,
+      "totalFat": 0.0,
+      "saturatedFat": 0.0,
+      "totalCarbs": 6.0,
+      "fiber": 2.0,
+      "netCarbs": 4.0,
+      "sugars": 1.5,
+      "protein": 0.5
+    }
+  },
+  {
+    "id": "snack-south-mix",
+    "name": "South Indian Coconut Trail Mix",
+    "category": "snack",
+    "healthFocus": ["Diabetes Control", "Hypothyroidism"],
+    "tags": ["Keto Friendly", "Energy Dense", "Savory"],
+    "description": "A dry, savory mix of roasted peanuts, crisp dry coconut flakes, roasted gram, and aromatic curry leaves.",
+    "sweetener": "None",
+    "prepTime": "15 mins",
+    "expertNotes": {
+      "chef": "There are no sticky binders here. Every ingredient is individually dry-roasted to its optimal crispness, creating a textural masterpiece that is perfectly dry for traveling.",
+      "chemist": "A perfectly balanced matrix of healthy plant fats, proteins, and fibers. Highly calorie-dense, it provides sustained energy without causing a sugar crash.",
+      "ayurveda": "This mix provides deep, grounding nourishment (Brimhana) and warming energy essential for combating sluggish thyroid function during physically draining long journeys."
+    },
+    "ingredients": [
+      "0.5 cup Roasted Unsalted Peanuts",
+      "0.5 cup Roasted Gram (Putani)",
+      "0.5 cup Dry Coconut (Kopra) sliced",
+      "2 tbsp Pumpkin Seeds",
+      "1 tbsp Ghee"
+    ],
+    "instructions": [
+      "Lightly toast the dry coconut slices on low heat until they are crisp and fragrant. Set aside.",
+      "In a large pan, heat the ghee. Add a pinch of mustard seeds and let them splutter.",
+      "Add the fresh curry leaves and fry until completely crisp.",
+      "Add the roasted peanuts, roasted gram, and pumpkin seeds to the pan. Toss well for 2 minutes on low heat.",
+      "Turn off the heat. Stir in the toasted coconut slices and pink salt.",
+      "Let the mix cool completely before storing in an airtight container."
+    ],
+    "nutrition": {
+      "servingSize": "0.25 Cup (35g)",
+      "calories": 185,
+      "totalFat": 14.5,
+      "saturatedFat": 6.0,
+      "totalCarbs": 9.5,
+      "fiber": 3.0,
+      "netCarbs": 6.5,
+      "sugars": 1.5,
+      "protein": 7.0
+    }
+  },
+  {
+    "id": "snack-makhana-sweet",
+    "name": "Ghee & Cardamom Sweet Foxnuts",
+    "category": "snack",
+    "healthFocus": ["Diabetes Control", "Hypothyroidism"],
+    "tags": ["Sweet Craving", "Zero Spike", "Light Snack"],
+    "description": "For those sweet travel cravings. Light foxnuts roasted in pure A2 ghee and dusted with a Stevia-cardamom blend.",
+    "sweetener": "Stevia Extract",
+    "prepTime": "10 mins",
+    "expertNotes": {
+      "chef": "Coating the makhana in ghee first allows the powdered stevia and cardamom to stick perfectly to the round surface, ensuring every bite is sweet and aromatic.",
+      "chemist": "A truly zero-net-carb sweet snack. The healthy fat from the ghee coats the stomach lining, which helps blunt the absorption of any accompanying travel meals.",
+      "ayurveda": "The warming properties of ghee and cardamom help stimulate digestion (Agni) and combat sluggish thyroid symptoms that worsen when sitting for long periods."
+    },
+    "ingredients": [
+      "3 cups Phool Makhana (Foxnuts)",
+      "2 tbsp Pure A2 Ghee",
+      "0.25 tsp Pure Stevia Extract Powder",
+      "0.5 tsp Freshly Ground Cardamom Powder"
+    ],
+    "instructions": [
+      "Dry roast the makhana in a wide pan on low heat until they are completely crisp and shatter easily.",
+      "In a small bowl, mix the stevia extract powder and cardamom powder.",
+      "Add the ghee to the pan with the roasted makhana and toss thoroughly so every piece is coated.",
+      "Immediately sprinkle the stevia-cardamom powder over the makhana while tossing vigorously off the heat.",
+      "Allow to cool completely; they will become crunchy and sweet."
+    ],
+    "nutrition": {
+      "servingSize": "1 Cup (30g)",
+      "calories": 135,
+      "totalFat": 8.0,
+      "saturatedFat": 5.0,
+      "totalCarbs": 15.0,
+      "fiber": 3.0,
+      "netCarbs": 12.0,
+      "sugars": 0.0,
+      "protein": 3.0
+    }
+  }
+]

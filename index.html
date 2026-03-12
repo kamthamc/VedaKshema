@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VedaKshema - A clinical and Ayurvedic concept store featuring zero-glycemic, hyperthyroid-friendly confections, beverages, and travel snacks.">
+  <title>VedaKshema | Clinical South Indian Confections</title>
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23064e3b'/%3E%3Cpath d='M30 70 Q 50 20 70 70 Q 50 90 30 70 Z' fill='%23f59e0b'/%3E%3Ccircle cx='50' cy='45' r='10' fill='%23ffffff'/%3E%3C/svg%3E">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root { color-scheme: light; }
+    body { font-family: 'Inter', sans-serif; background-color: #faf9f6; }
+    h1, h2, h3, h4, h5, .font-serif { font-family: 'Playfair Display', serif; }
+    
+    * { margin: 0; box-sizing: border-box; }
+
+    .fade-in { animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    @keyframes fadeIn { 
+      from { opacity: 0; transform: translateY(1.5rem); } 
+      to { opacity: 1; transform: translateY(0); } 
+    }
+    
+    .nutrition-label { background: white; border: 2px solid #111827; padding: 1.5rem; display: flex; flex-direction: column; gap: 0.25rem; }
+    .nutrition-row { display: flex; justify-content: space-between; padding-block: 0.35rem; border-bottom: 1px solid #e5e7eb; font-size: 0.875rem; }
+    
+    .product-card { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease; }
+    .product-card:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15); }
+    
+    .aspect-square-modern { aspect-ratio: 1 / 1; }
+    .aspect-card-header { aspect-ratio: 4 / 3; }
+    
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+  </style>
+</head>
+
+<body class="text-gray-800 antialiased min-h-[100dvh] flex flex-col justify-between">
+
+  <!-- AI DISCLAIMER BANNER -->
+  <header aria-label="Site Disclaimer" class="w-full flex justify-center bg-amber-100 border-b border-amber-200 z-[60] relative px-4 py-2">
+    <div class="w-full max-w-7xl flex items-center justify-center gap-2 text-amber-900 text-xs md:text-sm font-medium text-center">
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+      <span><strong>Concept Store Disclaimer:</strong> All recipes, nutritional values, and Ayurvedic medical claims are AI-generated concepts for educational purposes.</span>
+    </div>
+  </header>
+
+  <!-- Toast Notification -->
+  <div id="toast" role="status" aria-live="polite" class="fixed top-12 w-full flex justify-center z-[100] pointer-events-none opacity-0 transition-opacity duration-300">
+    <div class="alert alert-success shadow-xl text-white max-w-sm flex items-center gap-3 rounded-2xl bg-emerald-600 border-none">
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+      <span id="toast-message" class="font-medium">Item added!</span>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav aria-label="Main Navigation" class="sticky top-0 z-50 bg-white/85 backdrop-blur-xl border-b border-emerald-100 shadow-sm w-full flex justify-center">
+    <div class="w-full max-w-7xl px-4 lg:px-8 flex items-center justify-between h-20">
+      
+      <a aria-label="VedaKshema Home" class="text-3xl font-serif font-bold text-emerald-950 flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity tracking-tight" onclick="showStoreFront()">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 shrink-0" viewBox="0 0 100 100" fill="none">
+          <path d="M50 90 C 20 70, 20 40, 50 15 C 80 40, 80 70, 50 90 Z" fill="#064e3b"/>
+          <path d="M50 30 Q 35 60 50 80 Q 65 60 50 30 Z" fill="#f59e0b"/>
+          <circle cx="50" cy="50" r="4" fill="#fff"/>
+        </svg>
+        <span>Veda<span class="text-emerald-700">Kshema</span></span>
+      </a>
+
+      <div class="flex items-center gap-6">
+        <div class="relative grid place-items-center cursor-pointer group" onclick="document.getElementById('cartModal').showModal()">
+          <button aria-label="View Shopping Cart and Recipes" class="p-2 rounded-full bg-emerald-50 text-emerald-900 group-hover:bg-emerald-100 transition-colors">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+          </button>
+          <span id="cart-count" aria-hidden="true" class="absolute -top-1 -right-1 grid place-items-center bg-amber-500 text-white text-[10px] font-bold w-5 h-5 rounded-full border-2 border-white">0</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content" class="flex flex-col flex-grow w-full">
+    
+    <!-- Storefront View -->
+    <div id="storefront-view" class="flex flex-col w-full fade-in pb-24 gap-16">
+      
+      <!-- Custom SVG Hero Section -->
+      <section aria-labelledby="hero-title" class="relative flex justify-center bg-gradient-to-br from-emerald-950 via-emerald-900 to-green-950 text-white overflow-hidden py-16 md:py-24 px-4 lg:px-8">
+        
+        <div class="relative z-10 w-full max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-12">
+          <div class="flex flex-col gap-6 max-w-xl text-center lg:text-left z-20">
+            <span class="text-amber-400 font-bold tracking-widest uppercase text-xs md:text-sm shadow-sm inline-block">Clinical Ayurvedic Formulations</span>
+            <h1 id="hero-title" class="text-5xl md:text-7xl font-serif font-black leading-[1.1] tracking-tight">The Science of Sweetness.</h1>
+            <p class="text-emerald-100 text-lg md:text-xl font-light leading-relaxed">
+              Zero-GI confections and medicinal snacks engineered for metabolic stability. Filter by your specific health goals below.
+            </p>
+            <div class="flex justify-center lg:justify-start gap-4 pt-4">
+              <button aria-label="Scroll to shop section" onclick="document.getElementById('shop-section').scrollIntoView({behavior: 'smooth'})" class="bg-amber-500 hover:bg-amber-400 text-amber-950 font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all">Explore VedaKshema</button>
+            </div>
+          </div>
+
+          <div class="hidden lg:flex w-1/2 justify-center relative">
+            <svg viewBox="0 0 500 500" class="w-[120%] max-w-[600px] h-auto drop-shadow-2xl scale-110" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fcd34d" />
+                  <stop offset="100%" stop-color="#b45309" />
+                </linearGradient>
+                <linearGradient id="emeraldGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#047857" />
+                  <stop offset="100%" stop-color="#022c22" />
+                </linearGradient>
+                <pattern id="gridPat" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                </pattern>
+              </defs>
+              <circle cx="250" cy="250" r="230" fill="url(#emeraldGrad)" />
+              <circle cx="250" cy="250" r="230" fill="url(#gridPat)" />
+              <circle cx="250" cy="200" r="100" fill="url(#goldGrad)" opacity="0.9" />
+              <path d="M 250 420 C 120 420, 80 250, 250 120 C 420 250, 380 420, 250 420 Z" fill="rgba(255,255,255,0.05)" stroke="#34d399" stroke-width="2" />
+              <path d="M 250 420 C 170 350, 170 250, 250 120 C 330 250, 330 350, 250 420 Z" fill="rgba(255, 255, 255, 0.1)" stroke="#fcd34d" stroke-width="1" />
+              <line x1="80" y1="250" x2="420" y2="250" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="4,4"/>
+              <line x1="250" y1="80" x2="250" y2="420" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="4,4"/>
+              <circle cx="250" cy="250" r="6" fill="#fff" />
+              <circle cx="250" cy="120" r="4" fill="#fff" />
+              <circle cx="250" cy="420" r="4" fill="#fff" />
+              <circle cx="150" cy="250" r="4" fill="#fff" />
+              <circle cx="350" cy="250" r="4" fill="#fff" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section id="shop-section" aria-labelledby="shop-title" class="flex justify-center w-full px-4 lg:px-8">
+        <div class="w-full max-w-7xl flex flex-col gap-8">
+          
+          <!-- Master Filtering Dashboard -->
+          <div class="flex flex-col gap-6 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+            <h2 id="shop-title" class="text-3xl font-serif font-bold text-emerald-950">Curated Formulations</h2>
+            
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 border-t border-gray-100 pt-6">
+              
+              <!-- Format / Category Filter -->
+              <div class="flex flex-col gap-2 w-full lg:w-auto">
+                <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Filter by Format</span>
+                <div class="bg-gray-50 p-1.5 rounded-full border border-gray-200 inline-flex gap-1 flex-wrap" role="group" aria-label="Filter formats">
+                  <button aria-pressed="true" onclick="filterCategory('all')" id="btn-cat-all" class="cat-btn px-6 py-2 rounded-full text-sm font-bold bg-emerald-900 text-white transition-colors">All Types</button>
+                  <button aria-pressed="false" onclick="filterCategory('sweet')" id="btn-cat-sweet" class="cat-btn px-6 py-2 rounded-full text-sm font-bold text-gray-500 hover:text-emerald-900 hover:bg-emerald-50 transition-colors">Sweets</button>
+                  <button aria-pressed="false" onclick="filterCategory('beverage')" id="btn-cat-beverage" class="cat-btn px-6 py-2 rounded-full text-sm font-bold text-gray-500 hover:text-emerald-900 hover:bg-emerald-50 transition-colors">Beverages</button>
+                  <button aria-pressed="false" onclick="filterCategory('snack')" id="btn-cat-snack" class="cat-btn px-6 py-2 rounded-full text-sm font-bold text-gray-500 hover:text-emerald-900 hover:bg-emerald-50 transition-colors">Travel Snacks</button>
+                </div>
+              </div>
+
+              <!-- Health Focus Filter -->
+              <div class="flex flex-col gap-2 w-full lg:w-auto">
+                <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Filter by Health Goal</span>
+                <div class="flex flex-wrap gap-2" role="group" aria-label="Filter by Health Focus">
+                  <button aria-pressed="true" onclick="filterHealth('all')" id="btn-health-all" class="health-btn px-4 py-2 rounded-xl text-sm font-bold bg-emerald-100 text-emerald-900 border border-emerald-200 transition-colors shadow-sm">All Goals</button>
+                  <button aria-pressed="false" onclick="filterHealth('Diabetes Control')" id="btn-health-Diabetes Control" class="health-btn px-4 py-2 rounded-xl text-sm font-bold bg-white text-gray-600 border border-gray-200 hover:bg-blue-50 hover:text-blue-800 hover:border-blue-200 transition-colors">🩸 Diabetes</button>
+                  <button aria-pressed="false" onclick="filterHealth('Hyperthyroidism')" id="btn-health-Hyperthyroidism" class="health-btn px-4 py-2 rounded-xl text-sm font-bold bg-white text-gray-600 border border-gray-200 hover:bg-rose-50 hover:text-rose-800 hover:border-rose-200 transition-colors">🔥 Hyperthyroid</button>
+                  <button aria-pressed="false" onclick="filterHealth('Hypothyroidism')" id="btn-health-Hypothyroidism" class="health-btn px-4 py-2 rounded-xl text-sm font-bold bg-white text-gray-600 border border-gray-200 hover:bg-purple-50 hover:text-purple-800 hover:border-purple-200 transition-colors">❄️ Hypothyroid</button>
+                  <button aria-pressed="false" onclick="filterHealth('Gut Health')" id="btn-health-Gut Health" class="health-btn px-4 py-2 rounded-xl text-sm font-bold bg-white text-gray-600 border border-gray-200 hover:bg-green-50 hover:text-green-800 hover:border-green-200 transition-colors">🦠 Gut Health</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Products Grid -->
+          <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full" role="list">
+            <!-- Injected via JS -->
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- Detail View -->
+    <article id="detail-view" aria-label="Product Details" class="hidden flex-col w-full fade-in bg-white border-t border-gray-100 min-h-screen">
+      <div class="w-full flex justify-center bg-[#faf9f6] py-4 border-b border-gray-200 px-4">
+        <div class="w-full max-w-7xl flex justify-start">
+          <button aria-label="Go back to all products" onclick="showStoreFront()" class="text-sm font-bold text-emerald-700 hover:text-emerald-900 flex items-center gap-2 transition-colors">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+            Back to Catalog
+          </button>
+        </div>
+      </div>
+      
+      <section class="flex justify-center w-full px-4 lg:px-8 py-12 lg:py-20">
+        <div class="w-full max-w-7xl" id="detail-content">
+          <!-- Injected via JS -->
+        </div>
+      </section>
+    </article>
+
+  </main>
+
+  <!-- Cart Modal -->
+  <dialog id="cartModal" class="modal" aria-labelledby="modal-title">
+    <div class="modal-box w-11/12 max-w-5xl bg-white flex flex-col gap-6 p-6 md:p-8 rounded-3xl">
+      <div class="flex justify-between items-center border-b border-gray-100 pb-4">
+        <h2 id="modal-title" class="font-serif font-bold text-3xl text-emerald-950 flex items-center gap-3">
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+          Your Cart & Protocols
+        </h2>
+        <form method="dialog">
+          <button aria-label="Close Modal" class="btn btn-sm btn-circle btn-ghost text-gray-500 hover:bg-gray-100">✕</button>
+        </form>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- Cart Items List -->
+        <div class="flex flex-col gap-4 overflow-y-auto max-h-[60vh] pr-2">
+          <h3 class="font-serif font-bold text-xl text-emerald-900 border-b pb-2">Selected Items</h3>
+          <div id="cart-content" role="list" class="flex flex-col gap-4">
+            <!-- JS Injected -->
+          </div>
+        </div>
+
+        <!-- Master Ingredients List -->
+        <div class="flex flex-col gap-4 overflow-y-auto max-h-[60vh] bg-emerald-50/50 p-6 rounded-2xl border border-emerald-100">
+          <div id="master-ingredient-list" class="flex flex-col gap-2">
+             <!-- JS Injected -->
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="modal-action flex flex-col sm:flex-row justify-between items-center gap-4 border-t border-gray-100 pt-6">
+        <button id="download-all-btn" class="btn bg-emerald-900 hover:bg-emerald-800 text-white rounded-xl border-none shadow-md w-full sm:w-auto" onclick="downloadAllRecipes()">
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+          Download All Recipes (.txt)
+        </button>
+        <form method="dialog" class="w-full sm:w-auto">
+          <button class="btn bg-gray-100 hover:bg-gray-200 text-gray-800 border-none rounded-xl w-full sm:w-auto">Continue Shopping</button>
+        </form>
+      </div>
+    </div>
+    <form method="dialog" class="modal-backdrop">
+      <button>close</button>
+    </form>
+  </dialog>
+
+  <footer aria-label="Site Footer" class="bg-emerald-950 text-emerald-100 flex justify-center w-full border-t border-emerald-900 py-12 px-4 lg:px-8">
+    <div class="w-full max-w-7xl flex flex-col md:flex-row justify-between items-center gap-8">
+      <div class="flex flex-col gap-2 text-center md:text-left">
+        <h2 class="font-serif text-3xl text-white font-bold tracking-tight">VedaKshema</h2>
+        <p class="text-sm font-light opacity-80 max-w-sm">A highly accessible AI exploration of clinical South Indian formulations.</p>
+      </div>
+      <div class="flex flex-col md:items-end gap-2 text-center">
+        <p class="text-sm font-semibold opacity-60 uppercase tracking-widest text-amber-200">Semantic & Machine Readable</p>
+        <p class="text-xs font-light opacity-50">&copy; 2026 VedaKshema Concept.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let menuData = [];
+    let currentCategory = 'all';
+    let currentHealth = 'all';
+    let cart = [];
+
+    const pricing = {
+      'ladoo-01': '₹ 450.00 / box (10 pc)',
+      'halwa-01': '₹ 380.00 / 250g',
+      'payasam-01': '₹ 220.00 / jar'
+    }; 
+
+    const fallbackImages = {
+      'sweet': [
+        'https://images.unsplash.com/photo-1605197213498-89b5c39178bb?auto=format&fit=crop&w=800&q=80',
+        'https://images.unsplash.com/photo-1589131668819-216dc75730ce?auto=format&fit=crop&w=800&q=80'
+      ],
+      'beverage': [
+        'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80',
+        'https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=800&q=80'
+      ],
+      'snack': [
+        'https://images.unsplash.com/photo-1599599540026-6467bd9f0d7e?auto=format&fit=crop&w=800&q=80',
+        'https://images.unsplash.com/photo-1604909052636-f3cc615dfcf4?auto=format&fit=crop&w=800&q=80'
+      ]
+    };
+
+    const grid = document.getElementById('products-grid');
+    const storefront = document.getElementById('storefront-view');
+    const detailView = document.getElementById('detail-view');
+    const detailContent = document.getElementById('detail-content');
+    const cartContent = document.getElementById('cart-content');
+    const masterIngList = document.getElementById('master-ingredient-list');
+
+    async function loadData() {
+      try {
+        const response = await fetch('menu.json');
+        menuData = await response.json();
+        
+        menuData.forEach((item, index) => {
+          if (!item.image) {
+            const imgArray = fallbackImages[item.category] || fallbackImages['sweet'];
+            item.image = imgArray[index % imgArray.length];
+          }
+        });
+        
+        renderMenu();
+      } catch (error) {
+        console.error('Error loading menu data:', error);
+        grid.innerHTML = `
+          <div class="col-span-full flex flex-col items-center justify-center gap-4 py-20 bg-white rounded-3xl border border-red-100 shadow-sm">
+            <h3 class="text-2xl font-bold text-gray-900">Database Connection Failed</h3>
+            <p class="text-gray-500 font-medium">Please host this file on a local web server to bypass CORS restrictions.</p>
+          </div>`;
+      }
+    }
+
+    function addToCart(event, itemId) {
+      if(event) event.stopPropagation();
+      
+      const item = menuData.find(i => i.id === itemId);
+      if(!item) return;
+
+      const existingCartItem = cart.find(c => c.item.id === itemId);
+      if (existingCartItem) {
+        existingCartItem.quantity++;
+      } else {
+        cart.push({ item: item, quantity: 1 });
+      }
+
+      updateCartUI();
+      
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-message').innerText = item.name + ' added to cart!';
+      
+      toast.classList.remove('opacity-0');
+      toast.classList.add('opacity-100');
+      
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0');
+      }, 3000);
+    }
+
+    // Parses strings like "1.5 cups Flour" and multiplies by quantity
+    function parseIngredientString(ing, qty) {
+      const match = ing.trim().match(/^([\d\.]+)?\s*(.*)/);
+      if (match && match[1]) {
+        const num = parseFloat(match[1]);
+        if (!isNaN(num)) {
+          // Multiply and format cleanly (e.g., 1.5 * 2 = 3)
+          const total = Number.isInteger(num * qty) ? (num * qty) : (num * qty).toFixed(2);
+          return `<span class="text-emerald-700 font-bold bg-emerald-100 px-1.5 py-0.5 rounded shadow-sm mr-1">${total}</span> ${match[2]}`;
+        }
+      }
+      return `${ing} <span class="text-gray-400 font-bold ml-1">(x${qty})</span>`;
+    }
+
+    function updateCartUI() {
+      const totalItems = cart.reduce((sum, current) => sum + current.quantity, 0);
+      document.getElementById('cart-count').innerText = totalItems;
+
+      if (cart.length === 0) {
+        cartContent.innerHTML = `<p class="text-gray-500 text-center py-8">Your cart is empty.</p>`;
+        masterIngList.innerHTML = `<p class="text-gray-500 text-center py-8">Add items to view prep list.</p>`;
+        document.getElementById('download-all-btn').disabled = true;
+        return;
+      }
+
+      document.getElementById('download-all-btn').disabled = false;
+      cartContent.innerHTML = '';
+      
+      // Rebuild Master Prep List
+      let prepListHtml = `<h3 class="font-serif font-bold text-xl text-emerald-900 border-b border-emerald-200 pb-2 mb-2">Master Prep List</h3><ul class="text-sm space-y-4">`;
+
+      cart.forEach((cartItem) => {
+        const item = cartItem.item;
+        
+        // Render Cart Item Card
+        const cartCard = document.createElement('div');
+        cartCard.className = "bg-gray-50 border border-gray-200 rounded-2xl p-4 flex flex-col gap-4";
+        cartCard.setAttribute("role", "listitem");
+        
+        cartCard.innerHTML = `
+          <div class="flex justify-between items-start gap-4">
+            <div class="flex gap-4 items-center">
+               <img src="${item.image}" alt="${item.name}" class="w-12 h-12 rounded-xl object-cover shrink-0 shadow-sm border border-gray-200">
+               <div class="flex flex-col">
+                 <h4 class="font-serif font-bold text-gray-900 leading-tight">${item.name}</h4>
+                 <div class="flex items-center gap-2 mt-1">
+                   <span class="text-xs font-semibold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">Qty: ${cartItem.quantity}</span>
+                 </div>
+               </div>
+            </div>
+          </div>
+        `;
+        cartContent.appendChild(cartCard);
+
+        // Render Prep List Section for this item
+        prepListHtml += `
+          <li class="bg-white p-3 rounded-xl border border-emerald-100 shadow-sm">
+            <div class="font-bold text-emerald-950 mb-2 flex justify-between items-center">
+              ${item.name} 
+              <span class="text-xs font-black text-white bg-amber-500 px-2 py-0.5 rounded-full shadow-sm">x${cartItem.quantity} batches</span>
+            </div>
+            <ul class="space-y-1.5 pl-2 border-l-2 border-emerald-200">
+              ${item.ingredients.map(ing => `
+                <li class="flex items-start text-gray-700 leading-snug text-xs">
+                  <span class="mr-2 text-emerald-500 mt-0.5">●</span>
+                  <span>${parseIngredientString(ing, cartItem.quantity)}</span>
+                </li>
+              `).join('')}
+            </ul>
+          </li>
+        `;
+      });
+
+      prepListHtml += `</ul>`;
+      masterIngList.innerHTML = prepListHtml;
+    }
+
+    function formatRecipeText(item) {
+      return `
+======================================================
+RECIPE: ${item.name.toUpperCase()}
+======================================================
+Category: ${item.category.toUpperCase()}
+Health Focus: ${(item.healthFocus || []).join(', ')}
+Prep Time: ${item.prepTime}
+Sweetener: ${item.sweetener}
+
+DESCRIPTION:
+${item.description}
+
+------------------------------------------------------
+INGREDIENTS:
+------------------------------------------------------
+${item.ingredients.map(i => `* ${i}`).join('\n')}
+
+------------------------------------------------------
+PREPARATION PROTOCOL:
+------------------------------------------------------
+${item.instructions.map((ins, idx) => `${idx + 1}. ${ins}`).join('\n')}
+
+------------------------------------------------------
+CLINICAL INSIGHTS:
+------------------------------------------------------
+Chef's Note: ${item.expertNotes.chef}
+Chemist's Angle: ${item.expertNotes.chemist}
+Ayurvedic View: ${item.expertNotes.ayurveda}
+
+------------------------------------------------------
+NUTRITION (Per ${item.nutrition.servingSize}):
+Calories: ${item.nutrition.calories} kcal | Net Carbs: ${item.nutrition.netCarbs}g
+Total Fat: ${item.nutrition.totalFat}g | Protein: ${item.nutrition.protein}g
+======================================================
+`;
+    }
+
+    function downloadTextFile(filename, content) {
+      const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    function downloadSingleRecipe(itemId) {
+      const item = menuData.find(i => i.id === itemId);
+      if(!item) return;
+      downloadTextFile(`Recipe_${item.name.replace(/\\s+/g, '_')}.txt`, formatRecipeText(item));
+    }
+
+    function downloadAllRecipes() {
+      if(cart.length === 0) return;
+      let fullContent = "VEDAKSHEMA CLINICAL CONFECTIONS - SELECTED RECIPES\n\n";
+      cart.forEach(cartItem => { fullContent += formatRecipeText(cartItem.item) + "\n\n"; });
+      downloadTextFile("VedaKshema_Cart_Recipes.txt", fullContent);
+    }
+
+    function filterCategory(category) {
+      currentCategory = category;
+      
+      document.querySelectorAll('.cat-btn').forEach(btn => {
+        btn.classList.remove('bg-emerald-900', 'text-white');
+        btn.classList.add('text-gray-500', 'hover:bg-emerald-50');
+        btn.setAttribute('aria-pressed', 'false');
+      });
+      const activeBtn = document.getElementById(`btn-cat-${category}`);
+      if(activeBtn) {
+        activeBtn.classList.add('bg-emerald-900', 'text-white');
+        activeBtn.classList.remove('text-gray-500', 'hover:bg-emerald-50');
+        activeBtn.setAttribute('aria-pressed', 'true');
+      }
+      renderMenu();
+    }
+
+    function filterHealth(health) {
+      currentHealth = health;
+      
+      document.querySelectorAll('.health-btn').forEach(btn => {
+        btn.classList.remove('bg-emerald-100', 'text-emerald-900', 'border-emerald-200', 'shadow-sm');
+        btn.classList.add('bg-white', 'text-gray-600', 'border-gray-200');
+        btn.setAttribute('aria-pressed', 'false');
+      });
+      
+      const activeBtn = document.getElementById(`btn-health-${health}`);
+      if(activeBtn) {
+        activeBtn.classList.add('bg-emerald-100', 'text-emerald-900', 'border-emerald-200', 'shadow-sm');
+        activeBtn.classList.remove('bg-white', 'text-gray-600', 'border-gray-200');
+        activeBtn.setAttribute('aria-pressed', 'true');
+      }
+      renderMenu();
+    }
+
+    function getHealthBadgeHTML(healthArray) {
+      if(!healthArray || healthArray.length === 0) return '';
+      return healthArray.map(h => {
+        let colors = 'bg-gray-100 text-gray-700';
+        let icon = '';
+        if(h === 'Diabetes Control') { colors = 'bg-blue-100 text-blue-800 border border-blue-200'; icon = '🩸'; }
+        if(h === 'Hyperthyroidism') { colors = 'bg-rose-100 text-rose-800 border border-rose-200'; icon = '🔥'; }
+        if(h === 'Hypothyroidism') { colors = 'bg-purple-100 text-purple-800 border border-purple-200'; icon = '❄️'; }
+        if(h === 'Gut Health') { colors = 'bg-green-100 text-green-800 border border-green-200'; icon = '🦠'; }
+        return `<span class="${colors} px-2.5 py-1 rounded-full text-[10px] font-black tracking-wider uppercase flex items-center gap-1.5 shadow-sm">${icon} ${h}</span>`;
+      }).join('');
+    }
+
+    function renderMenu() {
+      grid.innerHTML = '';
+      
+      const filtered = menuData.filter(item => {
+        const matchCat = currentCategory === 'all' || item.category === currentCategory;
+        const matchHealth = currentHealth === 'all' || (item.healthFocus && item.healthFocus.includes(currentHealth));
+        return matchCat && matchHealth;
+      });
+
+      if(filtered.length === 0) {
+        grid.innerHTML = `<p class="col-span-full text-center text-gray-500 py-12">No products found matching these specific clinical criteria.</p>`;
+        return;
+      }
+
+      filtered.forEach((item) => {
+        const price = pricing[item.id] || '₹ 250.00';
+        const healthBadges = getHealthBadgeHTML(item.healthFocus);
+        
+        const card = document.createElement('article');
+        card.setAttribute('itemscope', '');
+        card.setAttribute('itemtype', 'https://schema.org/Product');
+        card.className = "product-card bg-white rounded-3xl border border-gray-200 overflow-hidden grid grid-rows-[auto_1fr_auto] h-full cursor-pointer group";
+        card.onclick = () => showDetail(item.id);
+
+        card.innerHTML = `
+          <header class="aspect-card-header relative flex justify-center items-center overflow-hidden bg-gray-100">
+            <img itemprop="image" src="${item.image}" alt="${item.name}" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            
+            <div class="absolute top-3 left-3 flex flex-col gap-2 items-start">
+              ${healthBadges}
+            </div>
+            <div class="absolute bottom-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent flex items-end">
+               <span class="text-white text-xs font-bold tracking-wide flex items-center gap-1.5 opacity-100">
+                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                 PREP: ${item.prepTime}
+               </span>
+            </div>
+          </header>
+          
+          <div class="p-6 flex flex-col gap-3">
+            <h2 itemprop="name" class="text-2xl font-serif font-bold text-gray-900 leading-tight group-hover:text-emerald-700 transition-colors">${item.name}</h2>
+            <p itemprop="description" class="text-sm text-gray-500 line-clamp-3 leading-relaxed">${item.description}</p>
+          </div>
+          
+          <footer class="p-6 pt-0 flex justify-between items-end bg-transparent">
+            <div class="flex flex-col gap-1" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+              <span class="text-[10px] text-emerald-700 font-bold uppercase tracking-widest bg-emerald-50 w-max px-2 py-0.5 rounded-sm">0-GI ${item.sweetener}</span>
+              <span itemprop="price" class="text-xl font-bold text-gray-900">${price}</span>
+            </div>
+            <button aria-label="Add ${item.name} to cart" onclick="addToCart(event, '${item.id}')" class="bg-emerald-950 hover:bg-emerald-800 text-white w-12 h-12 rounded-full grid place-items-center shadow-lg transition-transform hover:scale-105">
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+            </button>
+          </footer>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function showDetail(id) {
+      const item = menuData.find(i => i.id === id);
+      if(!item) return;
+      
+      const price = pricing[item.id] || '₹ 250.00';
+      const healthBadges = getHealthBadgeHTML(item.healthFocus);
+
+      storefront.classList.add('hidden');
+      detailView.classList.remove('hidden');
+      detailView.classList.add('flex');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      const ingredientsHtml = item.ingredients.map(ing => `
+        <li class="flex items-start gap-4 py-3 border-b border-gray-100 last:border-0">
+          <svg aria-hidden="true" class="h-5 w-5 text-emerald-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+          <span class="text-gray-700 font-medium leading-relaxed">${ing}</span>
+        </li>`).join('');
+      const instructionsHtml = item.instructions.map((inst, idx) => `
+        <div class="flex gap-5 bg-gray-50/50 p-4 rounded-xl border border-gray-100">
+          <div class="shrink-0 w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 font-bold flex justify-center items-center shadow-sm">${idx+1}</div>
+          <p class="text-gray-700 leading-relaxed">${inst}</p>
+        </div>`).join('');
+
+      detailContent.innerHTML = `
+        <div itemscope itemtype="https://schema.org/Recipe" class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+          <meta itemprop="name" content="${item.name}">
+          <meta itemprop="description" content="${item.description}">
+          
+          <div class="lg:col-span-5 flex flex-col gap-8">
+            <div class="w-full aspect-square-modern rounded-[2rem] shadow-inner relative overflow-hidden bg-gray-100">
+               <img itemprop="image" src="${item.image}" alt="${item.name}" class="w-full h-full object-cover">
+               <div class="absolute top-4 left-4 flex flex-col gap-2">
+                 ${healthBadges}
+               </div>
+            </div>
+            
+            <div class="bg-white border border-emerald-100 rounded-3xl p-8 shadow-sm flex flex-col gap-6">
+              <h3 class="font-serif font-bold text-2xl text-emerald-950 flex items-center gap-3 border-b border-emerald-50 pb-4">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+                Clinical Science
+              </h3>
+              
+              <div class="flex flex-col gap-4">
+                <details class="group bg-emerald-50/50 border border-emerald-100 rounded-2xl p-4" open>
+                  <summary class="font-bold text-emerald-900 cursor-pointer list-none flex justify-between">
+                    👨‍🍳 Chef's Technique
+                    <span class="group-open:rotate-180 transition-transform">▼</span>
+                  </summary>
+                  <p class="text-sm text-gray-700 leading-relaxed mt-3">${item.expertNotes.chef}</p>
+                </details>
+                <details class="group bg-blue-50/50 border border-blue-100 rounded-2xl p-4">
+                  <summary class="font-bold text-blue-900 cursor-pointer list-none flex justify-between">
+                    🧪 Biochemical Angle
+                    <span class="group-open:rotate-180 transition-transform">▼</span>
+                  </summary>
+                  <p class="text-sm text-gray-700 leading-relaxed mt-3">${item.expertNotes.chemist}</p>
+                </details>
+                <details class="group bg-amber-50/50 border border-amber-100 rounded-2xl p-4">
+                  <summary class="font-bold text-amber-900 cursor-pointer list-none flex justify-between">
+                    🌿 Ayurvedic Protocol
+                    <span class="group-open:rotate-180 transition-transform">▼</span>
+                  </summary>
+                  <p class="text-sm text-gray-700 leading-relaxed mt-3">${item.expertNotes.ayurveda}</p>
+                </details>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 flex flex-col gap-10">
+            
+            <div class="flex flex-col gap-5">
+              <h1 class="text-4xl md:text-6xl font-serif font-black text-gray-900 leading-[1.1] tracking-tight">${item.name}</h1>
+              <p class="text-xl text-gray-600 font-light leading-relaxed max-w-2xl">${item.description}</p>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-[2rem] p-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 shadow-sm">
+              <div class="flex flex-col gap-1">
+                <p class="text-sm font-bold text-gray-400 uppercase tracking-widest">Price</p>
+                <p class="text-4xl font-black text-emerald-950">${price}</p>
+                <p class="text-sm font-bold text-emerald-700 mt-2 flex items-center gap-1.5 bg-emerald-100/50 w-max px-3 py-1 rounded-full">
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  100% ${item.sweetener}
+                </p>
+              </div>
+              <div class="flex flex-col gap-3 w-full sm:w-auto">
+                <button aria-label="Add ${item.name} to cart" onclick="addToCart(event, '${item.id}')" class="bg-emerald-950 hover:bg-emerald-800 text-white w-full sm:w-auto px-10 py-5 rounded-2xl text-lg font-bold shadow-xl transition-all hover:shadow-emerald-900/30 hover:-translate-y-1">
+                  Add to Cart
+                </button>
+                <button onclick="downloadSingleRecipe('${item.id}')" class="btn btn-outline border-gray-300 text-gray-700 w-full sm:w-auto px-10 rounded-2xl font-bold">
+                  Download Recipe
+                </button>
+              </div>
+            </div>
+
+            <div class="flex gap-8 border-b border-gray-200 w-full pb-4" role="tablist">
+              <button role="tab" aria-selected="true" class="text-xl font-serif font-bold text-emerald-950 border-b-2 border-emerald-950 pb-1" id="tab-btn-recipe" onclick="switchDetailTab('recipe')">Preparation</button> 
+              <button role="tab" aria-selected="false" class="text-xl font-serif font-bold text-gray-400 hover:text-emerald-800 border-b-2 border-transparent pb-1 transition-colors" id="tab-btn-nutrition" onclick="switchDetailTab('nutrition')">Estimated Label</button> 
+            </div>
+
+            <div id="tab-content-recipe" role="tabpanel" aria-labelledby="tab-btn-recipe" class="flex flex-col gap-10 animate-fade-in">
+              <div class="flex flex-col gap-5">
+                <h3 class="text-2xl font-serif font-bold text-gray-900">Ingredients Matrix</h3>
+                <ul class="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm flex flex-col gap-2">
+                  ${ingredientsHtml}
+                </ul>
+              </div>
+              <div class="flex flex-col gap-5">
+                <div class="flex justify-between items-center">
+                  <h3 class="text-2xl font-serif font-bold text-gray-900">Protocol</h3>
+                  <span class="text-sm font-sans font-bold text-emerald-800 bg-emerald-50 px-4 py-1.5 rounded-full" itemprop="prepTime">⏱ ${item.prepTime}</span>
+                </div>
+                <div class="flex flex-col gap-4" itemprop="recipeInstructions">
+                  ${instructionsHtml}
+                </div>
+              </div>
+            </div>
+
+            <div id="tab-content-nutrition" role="tabpanel" aria-labelledby="tab-btn-nutrition" class="hidden animate-fade-in">
+              <div class="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm max-w-md w-full">
+                <div class="nutrition-label text-black">
+                  <h2 class="text-4xl font-black border-b-[8px] border-gray-900 pb-1 tracking-tight uppercase">Nutrition Facts</h2>
+                  <div class="font-bold text-lg border-b-[4px] border-gray-900 pb-2">Serving Size: ${item.nutrition.servingSize}</div>
+                  
+                  <div class="flex justify-between items-end font-black text-5xl py-2 border-b-[4px] border-gray-900">
+                    <span>Calories</span>
+                    <span>${item.nutrition.calories}</span>
+                  </div>
+                  
+                  <div class="text-right text-xs font-bold pt-1 pb-1">% Daily Value*</div>
+                  
+                  <div class="nutrition-row medium font-bold border-t-2 border-gray-900">
+                    <span>Total Fat ${item.nutrition.totalFat}g</span>
+                  </div>
+                  <div class="nutrition-row indent"><span>Saturated Fat ${item.nutrition.saturatedFat}g</span></div>
+                  
+                  <div class="nutrition-row medium font-bold border-t-[4px] border-gray-900 mt-1">
+                    <span>Total Carbohydrate ${item.nutrition.totalCarbs}g</span>
+                  </div>
+                  <div class="nutrition-row indent"><span>Dietary Fiber ${item.nutrition.fiber}g</span></div>
+                  <div class="nutrition-row indent text-red-700 font-bold bg-red-50/50"><span>Net Carbs ${item.nutrition.netCarbs}g</span></div>
+                  <div class="nutrition-row indent"><span>Total Sugars ${item.nutrition.sugars}g</span></div>
+                  
+                  <div class="nutrition-row font-bold thick mt-1 text-lg border-b-0 pb-0">
+                    <span>Protein ${item.nutrition.protein}g</span>
+                  </div>
+                </div>
+                
+                <p class="text-xs text-amber-700 mt-6 leading-relaxed font-bold bg-amber-50 p-3 border border-amber-200 rounded-lg">
+                  ⚠ Disclaimer: This nutrition label is an AI-generated estimate for conceptual purposes.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      `;
+    }
+
+    function switchDetailTab(tabName) {
+      document.getElementById('tab-content-recipe').classList.add('hidden');
+      document.getElementById('tab-content-nutrition').classList.add('hidden');
+      
+      const btnRecipe = document.getElementById('tab-btn-recipe');
+      const btnNutrition = document.getElementById('tab-btn-nutrition');
+      
+      btnRecipe.className = "text-xl font-serif font-bold text-gray-400 hover:text-emerald-800 border-b-2 border-transparent pb-1 transition-colors";
+      btnRecipe.setAttribute('aria-selected', 'false');
+      
+      btnNutrition.className = "text-xl font-serif font-bold text-gray-400 hover:text-emerald-800 border-b-2 border-transparent pb-1 transition-colors";
+      btnNutrition.setAttribute('aria-selected', 'false');
+
+      const activeBtn = document.getElementById('tab-btn-' + tabName);
+      activeBtn.className = "text-xl font-serif font-bold text-emerald-950 border-b-2 border-emerald-950 pb-1";
+      activeBtn.setAttribute('aria-selected', 'true');
+
+      document.getElementById('tab-content-' + tabName).classList.remove('hidden');
+      document.getElementById('tab-content-' + tabName).classList.add('flex');
+    }
+
+    function showStoreFront() {
+      detailView.classList.add('hidden');
+      detailView.classList.remove('flex');
+      storefront.classList.remove('hidden');
+      storefront.classList.add('flex');
+    }
+
+    // Initialize
+    loadData();
+    updateCartUI(); 
+  </script>
+</body>
+</html>
